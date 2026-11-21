@@ -23,7 +23,7 @@ input,select{width:100%;height:48px;padding:0 14px;border:1px solid #C9C2B2;bord
 .big{font-size:22px;font-weight:700;color:var(--g)}.chip{display:inline-block;font-size:12px;font-weight:600;color:var(--g);background:var(--gl);border-radius:8px;padding:6px 10px;margin:8px 6px 0 0}
 details{display:inline-block;max-width:100%}summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}.dl{font-size:13px;line-height:1.5;color:#3F4743;margin:6px 0 0}
 .warn{background:#FCE9CF;color:#7A3E00;border-radius:12px;padding:10px 14px;font-size:13px;line-height:1.5}.note{font-size:13px;line-height:1.5;color:#3F4743}
-.tap{cursor:pointer;-webkit-tap-highlight-color:transparent}.tap:active{background:var(--gl)}.sheet{overscroll-behavior:contain}
+.tap{cursor:pointer;-webkit-tap-highlight-color:transparent}.tap:active{background:var(--gl)}.sheet{overscroll-behavior:contain}.row.sub>span:last-child{white-space:nowrap}
 </style></head><body><div id="app">Memuat…</div>
 <script src="waris.js"></script>
 <script>
@@ -35,7 +35,7 @@ const relKey=(r,g)=>REL[r].g?REL[r][g]:REL[r].k;
 const relName=(r,g)=>REL[r].g?REL[r].t+(g==='L'?' laki-laki':' perempuan'):REL[r].t;
 const S={step:0,jk:'L',nama:'',istri:1,suami:1,list:[],m:{bawaan:0,utang:0,jenazah:0,wasiat:0},b:[],musy:true,radd:true,pop:null,res:null,det:null,harta:null,data:null,eng:null};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const rp=n=>'Rp '+Math.round(n).toLocaleString('id-ID'),fmt=n=>n?String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.'):'';
+const rp=n=>'Rp\u00a0'+Math.round(n).toLocaleString('id-ID'),fmt=n=>n?String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.'):'';
 const num=s=>Number(String(s).replace(/\D/g,'').slice(0,15))||0;
 const head=(n,t,sub,back)=>`<header>${back?'<button class="bk" data-a="back" aria-label="Kembali">← Kembali</button>':''}<div class="st">LANGKAH ${n} DARI 4</div><h1>${t}</h1><p>${sub}</p></header>`;
 const sp=(id,v)=>`<div class="sp"><button data-a="dec" data-id="${id}" aria-label="Kurangi">−</button><b>${v}</b><button data-a="inc" data-id="${id}" aria-label="Tambah">+</button></div>`;
@@ -86,13 +86,13 @@ function induk(b){if(!b.jalur||!b.jalur.includes(' > '))return '';
  return x+`<div class="note" style="margin-top:6px">Orang yang wafat menerima total <b>${tot}</b> dari harta. Dari bagian itu, ${esc(nm(b.nama))} mendapat <b>${inner}</b>: ${inner} × ${tot} = ${b.pecahan}.</div>`}
 function detSheet(){
  const r=S.res,b=r.bagian[S.det];if(!b)return '';
- const H=S.harta,hasRp=!!b.rupiah,D=H?H.dibagi:0;
- const ln=(l,v,bd)=>`<div class="row${bd?'':' sub'}" style="padding:3px 0"><span>${l}</span><span>${bd?'<b>'+v+'</b>':v}</span></div>`;
+ let HB='';const H=S.harta,hasRp=!!b.rupiah,D=H?H.dibagi:0;
+ const ln=(l,v,bd)=>`<div class="row${bd?'':' sub'}" style="padding:3px 0"><span>${l}</span><span style="white-space:nowrap">${bd?'<b>'+v+'</b>':v}</span></div>`;
  const sec=(t,x)=>`<div class="card" style="padding:12px 14px"><b>${t}</b><div style="margin-top:6px">${x}</div></div>`;
  let h=`<div class="ov"><div class="sheet" role="dialog" aria-label="Rincian hitungan">`;
  h+=`<div class="row"><b style="font-size:18px">${esc(nm(b.nama))}${b.jumlah>1?' × '+b.jumlah:''}</b><button class="btn2" data-a="detx" style="width:auto;padding:0 16px;min-height:40px">Tutup</button></div>`;
  h+=`<div class="row"><span class="sub">${b.persen}% dari harta yang dibagi</span><span class="big">${b.pecahan}</span></div>`;
- h+=sec('Asal bagian',`<div class="note">${esc(asal(b))}</div>${induk(b)}${tb(b)}${dalilHtml(b)}`);
+ h+='<!--HB-->'+sec('Asal bagian',`<div class="note">${esc(asal(b))}</div>${induk(b)}${tb(b)}${dalilHtml(b)}`);
  if(hasRp){let x=ln('Harta yang dibagi',rp(D))+ln(`${b.pecahan} × ${rp(D)}`,rp(b.rupiah),1);
   if(b.jumlah>1)x+=ln(`Dibagi ${b.jumlah} orang`,'± '+rp(b.rupiah/b.jumlah));
   x+='<div class="sub" style="margin-top:4px">Nominal dibulatkan ke rupiah penuh.</div>';h+=sec('Hitungan rupiah',x)}
@@ -103,8 +103,8 @@ function detSheet(){
   if(bw)x+=ln('Harta bawaan',rp(bw));if(bs)x+=ln('Harta bersama',rp(bs));if(H.milik)x+=ln('− ½ hak pasangan hidup','− '+rp(H.milik));
   x+=ln('Harta peninggalan',rp(H.tirkah),1);
   if(S.m.utang)x+=ln('− Utang','− '+rp(S.m.utang));if(S.m.jenazah)x+=ln('− Biaya jenazah','− '+rp(S.m.jenazah));if(H.wasiat)x+=ln('− Wasiat','− '+rp(H.wasiat));
-  x+=ln('Harta yang dibagi ke ahli waris',rp(H.dibagi),1);h+=sec('Asal harta yang dibagi',x)}
- return h+`<button class="btn" data-a="detx">Tutup</button></div></div>`}
+  x+=ln('Harta yang dibagi',rp(H.dibagi),1);HB=sec('Asal harta yang dibagi',x)}
+ return h.replace('<!--HB-->',HB)+`<button class="btn" data-a="detx">Tutup</button></div></div>`}
 function view(){
  let h='',f='';
  if(S.step===0){
@@ -186,7 +186,7 @@ function act(a,el){
   const key=relKey(it.r,it.g);if(P.i>=0)S.list.splice(P.i,1);
   const j=st==='h'?S.list.findIndex(x=>(x.st||'h')==='h'&&relKey(x.r,x.g)===key&&x.ke===it.ke):-1;if(j>=0)S.list[j].n=Math.min(ONE.has(key)?1:99,S.list[j].n+it.n);else S.list.push(it);S.pop=null}
  else if(a==='musy')S.musy=!S.musy;else if(a==='radd')S.radd=!S.radd;
- else if(a==='copy'){const t=S.res.bagian.map(b=>(b.jalur&&b.jalur!=='Pewaris'?'['+jl(b.jalur)+'] ':'')+nm(b.nama)+(b.jumlah>1?' x'+b.jumlah:'')+': '+b.pecahan+(b.rupiah?' ('+rp(b.rupiah)+')':'')).join('\n')+(()=>{const p=pas(S.res);return p?'\n\n'+p.T+' hidup, total: '+p.rows.map(x=>(p.n>1?x.l+' ':'')+'1/2 harta bersama '+rp(x.h)+' + warisan '+rp(x.w)+' = '+rp(x.t)).join('; '):''})()+'\n\nAlat bantu, bukan fatwa.';try{navigator.clipboard.writeText(t);el.textContent='Tersalin'}catch(e){}return}
+ else if(a==='copy'){const t=S.res.bagian.map(b=>(b.jalur&&b.jalur!=='Pewaris'?'['+jl(b.jalur)+'] ':'')+nm(b.nama)+(b.jumlah>1?' x'+b.jumlah:'')+': '+b.pecahan+(b.rupiah?' ('+rp(b.rupiah)+')':'')).join('\n')+(()=>{const p=pas(S.res);return p?'\n\n'+p.T+' hidup, total: '+p.rows.map(x=>(p.n>1?x.l+' ':'')+'1/2 harta bersama '+rp(x.h)+' + warisan '+rp(x.w)+' = '+rp(x.t)).join('; '):''})()+'\n\nAlat bantu, bukan fatwa.';try{navigator.clipboard.writeText(t.replace(/\u00a0/g,' '));el.textContent='Tersalin'}catch(e){}return}
  render(a==='det'||a==='detx');
 }
 document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(el&&S.data){if(el.dataset.a==='det'&&e.target.closest('details'))return;act(el.dataset.a,el)}});
