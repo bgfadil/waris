@@ -42,7 +42,7 @@ const seg=(a,v,opts)=>`<div class="seg">${opts.map(([k,t])=>`<button data-a="${a
 const tg=(a,on,aria)=>`<button class="tg ${on?'on':''}" data-a="${a}" role="switch" aria-checked="${on}" aria-label="${aria}"></button>`;
 const fld=(id,l,h,v)=>`<label>${l}<span>${h}</span><input data-f="${id}" inputmode="numeric" placeholder="Rp 0" value="${v?'Rp '+fmt(v):''}"></label>`;
 const KN={istri:'Istri',suami:'Suami'};REL.forEach(x=>{if(x.g){KN[x.L]=x.t+' laki-laki';KN[x.P]=x.t+' perempuan'}else KN[x.k]=x.t});
-function blk(key){const W=S.eng.W,N={};for(const [k,n] of Object.entries(heirs()))if(n>0){const [a,l]=WarisJS.INPUT[k];N[n===1?a:l]=k}
+function blk(key){const W=S.eng.W,N={};for(const [k,n] of Object.entries(heirsComb()))if(n>0){const [a,l]=WarisJS.INPUT[k];N[n===1?a:l]=k}
  const pr=Object.keys(N).map(Number).sort((a,b)=>a-b),c=+Object.keys(N).find(x=>N[x]===key),bad=r=>{try{return W.pilih(r,pr).tipe==='mahjub'}catch(e){return false}};
  let ch;try{ch=W.pilih(c,pr)}catch(e){return 'ahli waris lain'}
  if(ch.tipe!=='mahjub')return 'ahli waris lain (tidak ada sisa harta untuk ashabah)';
@@ -58,7 +58,16 @@ function pasHtml(r){const p=pas(r);if(!p)return '';
  p.rows.map(x=>`<div style="padding:8px 0;border-top:1px solid var(--bd)">${p.n>1?`<b>${x.l}</b>`:''}<div class="row sub"><span>½ harta bersama</span><span>${rp(x.h)}</span></div><div class="row sub"><span>Warisan ${p.pec}${p.n>1?' dibagi '+p.n:''}</span><span>${rp(x.w)}</span></div><div class="row"><b>Total</b><span class="big" style="font-size:18px">${rp(x.t)}</span></div></div>`).join('')+
  (p.n>1?`<div class="row" style="border-top:1px solid var(--bd);padding-top:8px"><b>Total semua istri</b><span class="big" style="font-size:18px">${rp(p.tot)}</span></div>`:'')+'</div>'}
 const spouseN=()=>S.jk==='L'?S.istri:S.suami;
-function heirs(){const h={};if(S.jk==='L'&&S.istri)h.istri=S.istri;if(S.jk==='P'&&S.suami)h.suami=1;for(const it of S.list){const k=relKey(it.r,it.g);h[k]=(h[k]||0)+it.n}return h}
+function heirs(){const h={};if(S.jk==='L'&&S.istri)h.istri=S.istri;if(S.jk==='P'&&S.suami)h.suami=1;for(const it of S.list){if((it.st||'h')!=='h')continue;const k=relKey(it.r,it.g);h[k]=(h[k]||0)+it.n}return h}
+const FEM=new Set(['anak_pr','cucu_pr','ibu','nenek_ayah','nenek_ibu','sdri_kandung','sdri_seayah','sdri_seibu']),PGT=new Set(['anak_lk','anak_pr','cucu_lk','cucu_pr']);
+const SUBL=k=>[FEM.has(k)?['suami','Suami',1]:['istri','Istri',4],['anak_lk','Anak laki-laki',9],['anak_pr','Anak perempuan',9],['cucu_lk','Cucu laki-laki (anak dari anak)',9],['cucu_pr','Cucu perempuan (anak dari anak)',9],['ayah','Ayah',1],['ibu','Ibu',1],['sdr_lk_kandung','Saudara kandung laki-laki',9],['sdri_kandung','Saudara kandung perempuan',9]];
+const wafatB=()=>S.list.filter(it=>it.st==='b').map(it=>({key:relKey(it.r,it.g),keturunan:{lk:it.kt.lk,pr:it.kt.pr}}));
+const wafatA=()=>S.list.filter(it=>it.st==='a').map(it=>({key:relKey(it.r,it.g),node:{heirs:{...it.sub}}}));
+function heirsComb(){const h=heirs();for(const x of wafatA())h[x.key]=(h[x.key]||0)+1;for(const x of wafatB())if(x.keturunan.lk+x.keturunan.pr>0)h[x.key]=(h[x.key]||0)+1;return h}
+const jl=j=>j.replace(/ \(\d+ orang\)/g,'').replace(/^Pewaris > /,'');
+const nm=t=>t.replace(/\s*\(.*?\)/g,'').replace(/Kemenakan/g,'Keponakan');
+const stp=(id,l,v)=>`<div class="row"><span style="font-size:14px">${l}</span>${sp(id,v)}</div>`;
+const sub1=it=>{const st=it.st||'h';if(st==='b')return `Wafat sebelum pewaris · keturunan: ${it.kt.lk} laki-laki, ${it.kt.pr} perempuan`;if(st==='a')return 'Wafat sesudah pewaris · ahli waris: '+Object.entries(it.sub).map(([k,n])=>KN[k]+' × '+n).join(', ');return it.ke?'Dari Istri '+it.ke:''};
 function view(){
  let h='',f='';
  if(S.step===0){
@@ -71,9 +80,9 @@ function view(){
  }else if(S.step===1){
   h=head(2,'Ahli waris','Tambahkan keluarga yang masih hidup.',1)+'<main>';
   if(spouseN())h+=`<div class="card"><b>${S.jk==='L'?'Istri × '+S.istri:'Suami × 1'}</b><br><span class="sub">Dari data pewaris (ubah di langkah 1)</span></div>`;
-  S.list.forEach((it,i)=>h+=`<button class="card row" data-a="edit" data-i="${i}"><span><b>${relName(it.r,it.g)} × ${it.n}</b>${it.ke?`<br><span class="sub">Dari Istri ${it.ke}</span>`:''}</span><span class="lk">Ubah</span></button>`);
+  S.list.forEach((it,i)=>h+=`<button class="card row" data-a="edit" data-i="${i}"><span><b>${relName(it.r,it.g)}${(it.st||'h')==='h'?' × '+it.n:''}</b>${sub1(it)?`<br><span class="sub">${esc(sub1(it))}</span>`:''}</span><span class="lk">Ubah</span></button>`);
   h+='<button class="dash" data-a="add">+ Tambah ahli waris</button></main>';
-  f=`<button class="btn" data-a="next" ${Object.keys(heirs()).length?'':'disabled'}>Lanjut: harta</button>`;
+  f=`<button class="btn" data-a="next" ${S.list.length||Object.keys(heirs()).length?'':'disabled'}>Lanjut: harta</button>`;
  }else if(S.step===2){
   h=head(3,'Harta peninggalan','Boleh dikosongkan bila hanya ingin pecahan.',1)+'<main>'+fld('m.bawaan','Harta bawaan','Milik pewaris sebelum menikah atau warisan/hibah',S.m.bawaan);
   if(S.jk==='L')for(let i=0;i<S.istri;i++)h+=fld('b.'+i,'Harta bersama dengan Istri '+(i+1),'Dibagi dua dengan istri tersebut',S.b[i]||0);
@@ -89,7 +98,7 @@ function view(){
    const hasRp=r.bagian.some(b=>b.rupiah);
    for(const b of r.bagian){
     const ds=(b.dalil||[]).map(n=>{const d=S.data.tabel_viii.dalil.find(x=>String(x.no)===String(n));return d?`<details><summary class="chip">Dalil ${n}</summary><div class="dl">${esc(d.terjemah)}</div></details>`:`<span class="chip">${esc(n)}</span>`}).join('');
-    h+=`<div class="card"><div class="row"><b>${esc(b.nama.replace(/\s*\(.*?\)/g,''))}${b.jumlah>1?' × '+b.jumlah:''}</b><span class="big">${b.pecahan}</span></div><div class="row sub"><span>${b.persen}%${b.jumlah>1?' untuk seluruhnya':''}</span><span>${hasRp?rp(b.rupiah||0):''}</span></div>${b.jumlah>1&&hasRp?`<div class="sub">± ${rp((b.rupiah||0)/b.jumlah)} per orang</div>`:''}${tb(b)}${ds}</div>`}
+    h+=`<div class="card">${b.jalur&&b.jalur!=='Pewaris'?`<div class="sub" style="margin-bottom:4px">${esc(jl(b.jalur))}</div>`:''}<div class="row"><b>${esc(nm(b.nama))}${b.jumlah>1?' × '+b.jumlah:''}</b><span class="big">${b.pecahan}</span></div><div class="row sub"><span>${b.persen}%${b.jumlah>1?' untuk seluruhnya':''}</span><span>${hasRp?rp(b.rupiah||0):''}</span></div>${b.jumlah>1&&hasRp?`<div class="sub">± ${rp((b.rupiah||0)/b.jumlah)} per orang</div>`:''}${tb(b)}${ds}</div>`}
    h+=pasHtml(r);
    if(r.catatan.length)h+=`<div class="note"><b>Catatan</b><br>${r.catatan.map(esc).join('<br>')}</div>`;
    h+='<div class="note">Alat bantu hitung berdasarkan KHI dan metode praktis. Bukan fatwa atau putusan. Untuk keputusan akhir, tanyakan ke ahli faraidh atau Pengadilan Agama.</div>';
@@ -100,37 +109,45 @@ function view(){
  return h+(S.pop?'':`<footer>${f}</footer>`);
 }
 function popup(){
- const p=S.pop,R=REL[p.r],mx=ONE.has(relKey(p.r,p.g))?1:9;
+ const p=S.pop,R=REL[p.r],key=relKey(p.r,p.g),st=p.st||'h',canB=PGT.has(key);
+ const opts=[['h','Hidup']].concat(canB?[['b','Wafat sebelum']]:[]).concat([['a','Wafat sesudah']]);
  return `<div class="ov"><div class="sheet" role="dialog" aria-label="Tambah ahli waris"><b style="font-size:18px">${p.i<0?'Tambah':'Ubah'} ahli waris</b>
  <label>Hubungan dengan pewaris<span></span><select data-f="pop.r">${REL.map((x,i)=>`<option value="${i}" ${i===p.r?'selected':''}>${x.t}</option>`).join('')}</select></label>
  ${R.g?`<div><label>Jenis kelamin<span></span></label>${seg('pg',p.g,[['L','Laki-laki'],['P','Perempuan']])}</div>`:''}
- <div class="row"><b style="font-size:14px">Jumlah</b>${sp('pn',p.n)}</div>
+ <div><label>Status<span></span></label>${seg('st',st,opts)}</div>
+ ${st==='h'?`<div class="row"><b style="font-size:14px">Jumlah</b>${sp('pn',p.n)}</div>`:''}
+ ${st==='b'?`<div class="note">Wafat sebelum pewaris: keturunannya menggantikan (Pasal 185 KHI), laki-laki 2 : perempuan 1.</div>${stp('kl','Keturunan laki-laki',p.kt.lk)}${stp('kp','Keturunan perempuan',p.kt.pr)}`:''}
+ ${st==='a'?`<div class="note">Wafat sesudah pewaris: ia tetap dapat bagian, lalu bagiannya diwariskan ke ahli warisnya sendiri. Isi ahli warisnya:</div>`+SUBL(key).map(([k,l,m])=>stp('s.'+k,l,p.sub[k]||0)).join(''):''}
  ${S.jk==='L'&&S.istri>1&&p.r===0?`<label>Dari istri ke-<span></span><select data-f="pop.ke">${Array.from({length:S.istri},(_,i)=>`<option value="${i+1}" ${p.ke===i+1?'selected':''}>Istri ${i+1}</option>`).join('')}</select></label>`:''}
+ ${p.err?`<div class="warn">${esc(p.err)}</div>`:''}
  <button class="btn" data-a="save">Simpan</button>${p.i>=0?'<button class="btn2" data-a="del" style="color:#9B2C2C">Hapus</button>':''}<button class="btn2" data-a="cancel">Batal</button></div></div>`;
 }
 function hitung(){
  const bersama=S.jk==='L'?S.b.slice(0,S.istri):(S.suami?(S.b[0]||0):0);
- const k={pewaris:{jk:S.jk},ahli_waris:{heirs:heirs()},harta:{bawaan:S.m.bawaan,bersama,utang:S.m.utang,biaya_jenazah:S.m.jenazah,wasiat:S.m.wasiat},musytarikah:S.musy,radd_pasangan:S.radd};
+ const k={pewaris:{jk:S.jk},ahli_waris:{heirs:heirs(),wafat_sebelum:wafatB(),wafat_sesudah:wafatA()},harta:{bawaan:S.m.bawaan,bersama,utang:S.m.utang,biaya_jenazah:S.m.jenazah,wasiat:S.m.wasiat},musytarikah:S.musy,radd_pasangan:S.radd};
  try{S.res=WarisJS.ringkas(S.eng.hitung(k))}catch(e){S.res={status:'error',catatan:['Terjadi kesalahan hitung: '+e.message],bagian:[]}}
 }
 function render(){const a=document.getElementById('app');a.innerHTML=view();window.scrollTo(0,0)}
 function act(a,el){
- const id=el.dataset.id,v=el.dataset.v,P=S.pop;
+ const id=el.dataset.id,v=el.dataset.v,P=S.pop;if(P&&a!=='save')P.err='';
  if(a==='jk'){S.jk=v;S.list=S.list.filter(x=>!(v==='P'&&x.ke))}
  else if(a==='suami')S.suami=S.suami?0:1;
- else if(a==='inc'||a==='dec'){const d=a==='inc'?1:-1;if(id==='istri')S.istri=Math.min(4,Math.max(0,S.istri+d));else if(id==='pn')P.n=Math.min(ONE.has(relKey(P.r,P.g))?1:9,Math.max(1,P.n+d))}
+ else if(a==='inc'||a==='dec'){const d=a==='inc'?1:-1;if(id==='istri')S.istri=Math.min(4,Math.max(0,S.istri+d));else if(id==='pn')P.n=Math.min(ONE.has(relKey(P.r,P.g))?1:9,Math.max(1,P.n+d));else if(id==='kl')P.kt.lk=Math.min(9,Math.max(0,P.kt.lk+d));else if(id==='kp')P.kt.pr=Math.min(9,Math.max(0,P.kt.pr+d));else if(id.startsWith('s.')){const k=id.slice(2),m=SUBL(relKey(P.r,P.g)).find(x=>x[0]===k)[2];P.sub[k]=Math.min(m,Math.max(0,(P.sub[k]||0)+d))}}
  else if(a==='next'){if(S.step===2)hitung();S.step++}
  else if(a==='back'||a==='reset'){if(a==='reset'){S.step=0;S.list=[];S.m={bawaan:0,utang:0,jenazah:0,wasiat:0};S.b=[];S.res=null}else S.step--}
- else if(a==='add')S.pop={i:-1,r:0,g:'L',n:1,ke:1};
- else if(a==='edit'){const it=S.list[+el.dataset.i];S.pop={...it,i:+el.dataset.i,ke:it.ke||1}}
- else if(a==='pg'){P.g=v}
+ else if(a==='add')S.pop={i:-1,r:0,g:'L',n:1,ke:1,st:'h',kt:{lk:1,pr:0},sub:{}};
+ else if(a==='edit'){const it=S.list[+el.dataset.i];S.pop={...it,i:+el.dataset.i,ke:it.ke||1,st:it.st||'h',kt:{...(it.kt||{lk:1,pr:0})},sub:{...(it.sub||{})}}}
+ else if(a==='pg'){P.g=v;P.sub={}}
+ else if(a==='st'){P.st=v}
  else if(a==='cancel')S.pop=null;
  else if(a==='del'){S.list.splice(P.i,1);S.pop=null}
- else if(a==='save'){const it={r:P.r,g:REL[P.r].g?P.g:'L',n:P.n,ke:(S.jk==='L'&&S.istri>1&&P.r===0)?P.ke:0};
+ else if(a==='save'){const st=P.st||'h',it={r:P.r,g:REL[P.r].g?P.g:'L',n:st==='h'?P.n:1,ke:(S.jk==='L'&&S.istri>1&&P.r===0)?P.ke:0,st};
+  if(st==='a'){const sub={};for(const [k,n] of Object.entries(P.sub||{}))if(n>0)sub[k]=n;if(!Object.keys(sub).length){P.err='Isi minimal satu ahli waris dari orang yang wafat ini.';render();return}it.sub=sub}
+  if(st==='b')it.kt={lk:P.kt.lk,pr:P.kt.pr};
   const key=relKey(it.r,it.g);if(P.i>=0)S.list.splice(P.i,1);
-  const j=S.list.findIndex(x=>relKey(x.r,x.g)===key&&x.ke===it.ke);if(j>=0)S.list[j].n=Math.min(ONE.has(key)?1:99,S.list[j].n+it.n);else S.list.push(it);S.pop=null}
+  const j=st==='h'?S.list.findIndex(x=>(x.st||'h')==='h'&&relKey(x.r,x.g)===key&&x.ke===it.ke):-1;if(j>=0)S.list[j].n=Math.min(ONE.has(key)?1:99,S.list[j].n+it.n);else S.list.push(it);S.pop=null}
  else if(a==='musy')S.musy=!S.musy;else if(a==='radd')S.radd=!S.radd;
- else if(a==='copy'){const t=S.res.bagian.map(b=>b.nama.replace(/\s*\(.*?\)/g,'')+(b.jumlah>1?' x'+b.jumlah:'')+': '+b.pecahan+(b.rupiah?' ('+rp(b.rupiah)+')':'')).join('\n')+(()=>{const p=pas(S.res);return p?'\n\n'+p.T+' hidup, total: '+p.rows.map(x=>(p.n>1?x.l+' ':'')+'1/2 harta bersama '+rp(x.h)+' + warisan '+rp(x.w)+' = '+rp(x.t)).join('; '):''})()+'\n\nAlat bantu, bukan fatwa.';try{navigator.clipboard.writeText(t);el.textContent='Tersalin'}catch(e){}return}
+ else if(a==='copy'){const t=S.res.bagian.map(b=>(b.jalur&&b.jalur!=='Pewaris'?'['+jl(b.jalur)+'] ':'')+nm(b.nama)+(b.jumlah>1?' x'+b.jumlah:'')+': '+b.pecahan+(b.rupiah?' ('+rp(b.rupiah)+')':'')).join('\n')+(()=>{const p=pas(S.res);return p?'\n\n'+p.T+' hidup, total: '+p.rows.map(x=>(p.n>1?x.l+' ':'')+'1/2 harta bersama '+rp(x.h)+' + warisan '+rp(x.w)+' = '+rp(x.t)).join('; '):''})()+'\n\nAlat bantu, bukan fatwa.';try{navigator.clipboard.writeText(t);el.textContent='Tersalin'}catch(e){}return}
  render();
 }
 document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(el&&S.data)act(el.dataset.a,el)});
@@ -138,7 +155,7 @@ document.addEventListener('input',e=>{const f=e.target.dataset.f;if(!f)return;if
  if(f[0]==='m'||f[0]==='b'){const n=num(e.target.value),t=n?'Rp '+fmt(n):'';e.target.value=t;try{e.target.setSelectionRange(t.length,t.length)}catch(_){}}});
 document.addEventListener('change',e=>{const f=e.target.dataset.f;if(!f)return;
  if(f[0]==='m'||f[0]==='b'){e.target.value=num(e.target.value)?'Rp '+fmt(num(e.target.value)):''}
- else if(f==='pop.r'){S.pop.r=+e.target.value;S.pop.n=Math.min(S.pop.n,ONE.has(relKey(S.pop.r,S.pop.g))?1:9);render()}
+ else if(f==='pop.r'){S.pop.r=+e.target.value;S.pop.n=Math.min(S.pop.n,ONE.has(relKey(S.pop.r,S.pop.g))?1:9);S.pop.sub={};if(!PGT.has(relKey(S.pop.r,S.pop.g))&&S.pop.st==='b')S.pop.st='h';render()}
  else if(f==='pop.ke')S.pop.ke=+e.target.value});
 fetch('waris_faraidh.json').then(r=>r.json()).then(d=>{S.data=d;S.eng=new WarisJS.WarisLanjut(d);render()}).catch(()=>{document.getElementById('app').innerHTML='<p style="padding:16px">Data gagal dimuat. Buka lewat alamat http (bukan langsung dari berkas).</p>'});
 if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
