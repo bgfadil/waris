@@ -118,12 +118,12 @@ function view(){
   h=head(1,'Siapa yang wafat?','Pewaris menentukan siapa saja ahli warisnya.');
   h+=`<main><div><label>Jenis kelamin pewaris<span></span></label>${seg('jk',S.jk,[['L','Laki-laki'],['P','Perempuan']])}</div>
   <label>Nama (boleh dikosongkan)<span></span><input data-f="nama" placeholder="Nama pewaris" value="${esc(S.nama)}"></label>
-  ${S.jk==='L'?`<div class="card"><div class="row"><span><b>Istri yang masih hidup</b><br><span class="sub">Maksimal 4 (poligami)</span></span>${sp('istri',S.istri)}</div><p class="note">Bagian istri dibagi rata antar istri. Tiap pernikahan punya harta bersama sendiri.</p></div>`
-  :`<div class="card"><div class="row"><span><b>Suami masih hidup</b></span>${tg('suami',S.suami,'Suami masih hidup')}</div></div>`}</main>`;
+  ${0?`<div class="card"><div class="row"><span><b>Istri yang masih hidup</b><br><span class="sub">Maksimal 4 (poligami)</span></span>${sp('istri',S.istri)}</div><p class="note">Bagian istri dibagi rata antar istri. Tiap pernikahan punya harta bersama sendiri.</p></div>`
+  :''}</main>`;
   f='<button class="btn" data-a="next">Lanjut: ahli waris</button>';
  }else if(S.step===1){
   h=head(2,'Ahli waris','Tambahkan keluarga: yang masih hidup maupun yang sudah wafat.',1)+'<main>';
-  if(spouseN())h+=`<div class="card"><b>${S.jk==='L'?'Istri × '+S.istri:'Suami'}</b><br><span class="sub">Dari data pewaris (ubah di langkah 1)</span></div>`;
+  if(S.jk==='L')h+=S.istri?`<div class="card"><div class="row"><span><b>Istri × ${S.istri}</b><br><span class="sub">Maksimal 4. Bagian dibagi rata antar istri; tiap pernikahan punya harta bersama sendiri.</span></span>${sp('istri',S.istri)}</div></div>`:`<button class="dash" data-a="inc" data-id="istri">+ Tambah istri</button>`;else h+=S.suami?`<div class="card"><div class="row"><span><b>Suami</b></span><button class="lk" data-a="suami" style="background:none;border:0">Hapus</button></div></div>`:`<button class="dash" data-a="suami">+ Tambah suami</button>`;
   S.list.forEach((it,i)=>h+=`<button class="card row" data-a="edit" data-i="${i}"><span><b>${relName(it.r,it.g)}${(it.st||'h')==='h'?' × '+it.n:''}</b>${sub2(it)}</span><span class="lk">Ubah</span></button>`);
   h+='<button class="dash" data-a="add">+ Tambah ahli waris</button></main>';
   f=`<button class="btn" data-a="next" ${S.list.length||Object.keys(heirs()).length?'':'disabled'}>Lanjut: harta</button>`;
