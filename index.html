@@ -23,7 +23,7 @@ input,select{width:100%;height:48px;padding:0 14px;border:1px solid #C9C2B2;bord
 .big{font-size:22px;font-weight:700;color:var(--g)}.chip{display:inline-block;font-size:12px;font-weight:600;color:var(--g);background:var(--gl);border-radius:8px;padding:6px 10px;margin:8px 6px 0 0}
 details{display:inline-block;max-width:100%}summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}.dl{font-size:13px;line-height:1.5;color:#3F4743;margin:6px 0 0}
 .warn{background:#FCE9CF;color:#7A3E00;border-radius:12px;padding:10px 14px;font-size:13px;line-height:1.5}.note{font-size:13px;line-height:1.5;color:#3F4743}
-.tap{cursor:pointer;-webkit-tap-highlight-color:transparent}.tap:active{background:var(--gl)}.sheet{overscroll-behavior:contain}.row.sub>span:last-child{white-space:nowrap}
+.tap{cursor:pointer;-webkit-tap-highlight-color:transparent}.tap:active{background:var(--gl)}.sheet{overscroll-behavior:contain}.ar{font-family:"Noto Naskh Arabic","Amiri","Scheherazade New","Traditional Arabic",serif;font-size:22px;line-height:2.1;color:var(--tx);text-align:right;margin:2px 0 10px;padding-bottom:8px;border-bottom:1px dashed var(--bd)}.row.sub>span:last-child{white-space:nowrap}
 </style></head><body><div id="app">Memuat…</div>
 <script src="waris.js"></script>
 <script>
@@ -70,7 +70,7 @@ const nm=t=>t.replace(/\s*\(.*?\)/g,'').replace(/Kemenakan/g,'Keponakan');
 const stp=(id,l,v)=>`<div class="row"><span style="font-size:14px">${l}</span>${sp(id,v)}</div>`;
 const sub1=it=>{const st=it.st||'h';if(st==='b')return `Wafat sebelum pewaris · keturunan: ${it.kt.lk} laki-laki, ${it.kt.pr} perempuan`;if(st==='a')return 'Wafat sesudah pewaris · ahli waris: '+Object.entries(it.sub).map(([k,n])=>KN[k]+' × '+n).join(', ');return it.ke?'Dari Istri '+it.ke:''};
 const fv=s=>{const m=/^(\d+)\/(\d+)$/.exec(String(s));return m?+m[1]/+m[2]:null};
-const dalilHtml=b=>(b.dalil||[]).map(n=>{const d=S.data.tabel_viii.dalil.find(x=>String(x.no)===String(n));return d?`<details><summary class="chip">Dalil ${n}</summary><div class="dl">${esc(d.terjemah)}</div></details>`:`<span class="chip">${esc(n)}</span>`}).join('');
+const dalilHtml=(b,o)=>(b.dalil||[]).map(n=>{const d=S.data.tabel_viii.dalil.find(x=>String(x.no)===String(n));return d?`<details${o?' open':''}><summary class="chip">Dalil ${n}</summary><div class="dl">${d.arab?`<div class="ar" dir="rtl" lang="ar">${esc(d.arab)}</div>`:''}${esc(d.terjemah)}</div></details>`:`<span class="chip">${esc(n)}</span>`}).join('');
 function asal(b){const t=String(b.hasil_baku||'');
  if(b.pecahan==='0')return 'Terhalang (mahjub): tidak mendapat bagian dalam kasus ini.';
  if(t==='pengganti')return 'Menggantikan orang tuanya yang wafat sebelum pewaris (Pasal 185 KHI). Laki-laki mendapat 2 kali bagian perempuan.';
@@ -92,7 +92,7 @@ function detSheet(){
  let h=`<div class="ov"><div class="sheet" role="dialog" aria-label="Rincian hitungan">`;
  h+=`<div class="row"><b style="font-size:18px">${esc(nm(b.nama))}${b.jumlah>1?' × '+b.jumlah:''}</b><button class="btn2" data-a="detx" style="width:auto;padding:0 16px;min-height:40px">Tutup</button></div>`;
  h+=`<div class="row"><span class="sub">${b.persen}% dari harta yang dibagi</span><span class="big">${b.pecahan}</span></div>`;
- h+='<!--HB-->'+sec('Asal bagian',`<div class="note">${esc(asal(b))}</div>${induk(b)}${tb(b)}${dalilHtml(b)}`);
+ h+='<!--HB-->'+sec('Asal bagian',`<div class="note">${esc(asal(b))}</div>${induk(b)}${tb(b)}${dalilHtml(b,1)}`);
  if(hasRp){let x=ln('Harta yang dibagi',rp(D))+ln(`${b.pecahan} × ${rp(D)}`,rp(b.rupiah),1);
   if(b.jumlah>1)x+=ln(`Dibagi ${b.jumlah} orang`,'± '+rp(b.rupiah/b.jumlah));
   x+='<div class="sub" style="margin-top:4px">Nominal dibulatkan ke rupiah penuh.</div>';h+=sec('Hitungan rupiah',x)}
@@ -134,7 +134,7 @@ function view(){
   else{
    const hasRp=r.bagian.some(b=>b.rupiah);
    for(const [bi,b] of r.bagian.entries()){
-    const ds=(b.dalil||[]).map(n=>{const d=S.data.tabel_viii.dalil.find(x=>String(x.no)===String(n));return d?`<details><summary class="chip">Dalil ${n}</summary><div class="dl">${esc(d.terjemah)}</div></details>`:`<span class="chip">${esc(n)}</span>`}).join('');
+    const ds=dalilHtml(b);
     h+=`<div class="card tap" data-a="det" data-i="${bi}">${b.jalur&&b.jalur!=='Pewaris'?`<div class="sub" style="margin-bottom:4px">${esc(jl(b.jalur))}</div>`:''}<div class="row"><b>${esc(nm(b.nama))}${b.jumlah>1?' × '+b.jumlah:''}</b><span class="big">${b.pecahan}</span></div><div class="row sub"><span>${b.persen}%${b.jumlah>1?' untuk seluruhnya':''}</span><span>${hasRp?rp(b.rupiah||0):''}</span></div>${b.jumlah>1&&hasRp?`<div class="sub">± ${rp((b.rupiah||0)/b.jumlah)} per orang</div>`:''}${tb(b)}${ds}<div class="lk" style="margin-top:8px">Rincian hitungan ›</div></div>`}
    h+=pasHtml(r);
    if(r.catatan.length)h+=`<div class="note"><b>Catatan</b><br>${r.catatan.map(esc).join('<br>')}</div>`;
