@@ -70,7 +70,7 @@ class Waris {
       dalil: tok ? (no === 9 && raw === '1/3d+1/3d' ? ['24'] : this.dalilNo(no, tok)) : [] };
   }
   hitung(heirs, harta = null, opsi = {}) {
-    const musytarikah = opsi.musytarikah !== false, raddPasangan = opsi.radd_pasangan !== false;
+    const musytarikah = opsi.musytarikah !== false, raddPasangan = opsi.radd_pasangan !== false, radd = opsi.radd !== false;
     const N = {};
     for (const [k, n] of Object.entries(heirs)) { if (n <= 0) continue; const [s, l] = INPUT[k]; N[n === 1 ? s : l] = [k, n]; }
     const res = { status: 'ok', catatan: [], bagian: [], mode: null };
@@ -131,7 +131,7 @@ class Waris {
         for (const [c, wv] of Object.entries(w)) share[c] = (share[c] || ZERO).add(sisa.mul(wv).div(tw));
       } else {
         const recv = present.filter((c) => share[c].gt(0)), sp = recv.filter((c) => c === 23 || c === 25); res.mode = 'radd';
-        if (raddPasangan || !sp.length) { res.catatan.push('Radd (Pasal 193): sisa dibagi berimbang, suami/istri ikut.'); for (const c of Object.keys(share)) share[c] = Ft.gt(0) ? gf[c].div(Ft) : share[c]; }
+        if (!radd) { res.mode = 'baitulmal'; res.catatan.push('Sisa harta tidak dibagi ke ahli waris (diserahkan ke Baitul Mal, tanpa radd).'); } else if (raddPasangan || !sp.length) { res.catatan.push('Radd (Pasal 193): sisa dibagi berimbang, suami/istri ikut.'); for (const c of Object.keys(share)) share[c] = Ft.gt(0) ? gf[c].div(Ft) : share[c]; }
         else {
           const others = recv.filter((c) => !sp.includes(c)), fo = sum(others.map((c) => gf[c])), spf = sum(sp.map((c) => gf[c]));
           res.catatan.push('Radd tanpa pasangan (opsi).'); for (const c of others) share[c] = gf[c].mul(ONE.sub(spf)).div(fo);
@@ -209,7 +209,7 @@ class WarisLanjut {
     const nI = heirs.istri || 0, nS = heirs.suami || 0, err = (m) => { res.status = 'error'; res.catatan.push(m); return res; };
     if (jk === 'P' && nI) return err('Pewaris perempuan tidak punya istri.'); if (jk === 'L' && nS) return err('Pewaris laki-laki tidak punya suami.');
     if (nI > 4) return err('Istri maksimal 4.'); if (jk === 'P' && nS > 1) return err('Suami maksimal 1.');
-    const opsi = { musytarikah: kasus.musytarikah !== false, radd_pasangan: kasus.radd_pasangan !== false }, out = [], cat = res.catatan;
+    const opsi = { musytarikah: kasus.musytarikah !== false, radd_pasangan: kasus.radd_pasangan !== false, radd: kasus.radd !== false }, out = [], cat = res.catatan;
     if (!this.node(node, ONE, 'Pewaris', jk, out, cat, opsi)) { res.status = 'tidak_didukung'; return res; }
     res.bagian = out; res.total = sum(out.map((x) => x.fraksi));
     if (kasus.harta) { const [t, c] = this.tirkah(kasus.harta, jk, nI, nS); cat.push(...c); res.harta = t; for (const x of out) x.rupiah = x.fraksi.mul(t.dibagi); }

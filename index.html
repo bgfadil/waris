@@ -33,7 +33,7 @@ const REL=[{t:'Anak',L:'anak_lk',P:'anak_pr',g:1},{t:'Cucu (anak dari anak)',L:'
 const ONE=new Set(['ayah','ibu','kakek','nenek_ayah','nenek_ibu']);
 const relKey=(r,g)=>REL[r].g?REL[r][g]:REL[r].k;
 const relName=(r,g)=>REL[r].g?REL[r].t+(g==='L'?' laki-laki':' perempuan'):REL[r].t;
-const S={step:0,jk:'L',nama:'',istri:1,suami:1,list:[],m:{bawaan:0,utang:0,jenazah:0,wasiat:0},b:[],musy:true,radd:true,pop:null,res:null,det:null,harta:null,data:null,eng:null};
+const S={step:0,jk:'L',nama:'',istri:1,suami:1,list:[],m:{bawaan:0,utang:0,jenazah:0,wasiat:0},b:[],musy:true,radd:true,baitul:false,ask:null,askNo:'',ntc:'',sisa:null,pop:null,res:null,det:null,harta:null,data:null,eng:null};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const rp=n=>'Rp\u00a0'+Math.round(n).toLocaleString('id-ID'),fmt=n=>n?String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.'):'';
 const num=s=>Number(String(s).replace(/\D/g,'').slice(0,15))||0;
@@ -123,7 +123,7 @@ function view(){
   f='<button class="btn" data-a="next">Lanjut: ahli waris</button>';
  }else if(S.step===1){
   h=head(2,'Ahli waris','Tambahkan keluarga: yang masih hidup maupun yang sudah wafat.',1)+'<main>';
-  if(S.jk==='L')h+=S.istri?`<div class="card"><div class="row"><span><b>Istri × ${S.istri}</b><br><span class="sub">Maksimal 4. Bagian dibagi rata antar istri; tiap pernikahan punya harta bersama sendiri.</span></span>${sp('istri',S.istri)}</div></div>`:`<button class="dash" data-a="inc" data-id="istri">+ Tambah istri</button>`;else h+=S.suami?`<div class="card"><div class="row"><span><b>Suami</b></span><button class="ib d" data-a="suami" aria-label="Hapus suami"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></div></div>`:`<button class="dash" data-a="suami">+ Tambah suami</button>`;
+  if(S.jk==='L')h+=S.istri?`<div class="card"><div class="row"><span><b>Istri × ${S.istri}</b></span>${sp('istri',S.istri)}</div></div>`:`<button class="dash" data-a="inc" data-id="istri">+ Tambah istri</button>`;else h+=S.suami?`<div class="card"><div class="row"><span><b>Suami</b></span><button class="ib d" data-a="suami" aria-label="Hapus suami"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></div></div>`:`<button class="dash" data-a="suami">+ Tambah suami</button>`;
   S.list.forEach((it,i)=>h+=`<div class="card row"><span><b>${relName(it.r,it.g)}${(it.st||'h')==='h'?' × '+it.n:''}</b>${sub2(it)}</span><span class="ic"><button class="ib" data-a="edit" data-i="${i}" aria-label="Ubah"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button><button class="ib d" data-a="delx" data-i="${i}" aria-label="Hapus"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg></button></span></div>`);
   h+='<button class="dash" data-a="add">+ Tambah ahli waris</button></main>';
   f=`<button class="btn" data-a="next" ${S.list.length||Object.keys(heirs()).length?'':'disabled'}>Lanjut: harta</button>`;
@@ -133,7 +133,7 @@ function view(){
   else if(S.suami)h+=fld('b.0','Harta bersama dengan suami','Dibagi dua dengan suami',S.b[0]||0);
   h+=fld('m.utang','Utang','Dikurangi sebelum dibagi',S.m.utang)+fld('m.jenazah','Biaya jenazah','Dikurangi sebelum dibagi',S.m.jenazah)+fld('m.wasiat','Wasiat','Maksimal 1/3 harta bersih (Pasal 195)',S.m.wasiat)
   +`<div class="card row"><span><b>Musytarakah</b><br><span class="sub">Saudara kandung ikut bagian seibu bila perlu (diperselisihkan)</span></span>${tg('musy',S.musy,'Musytarakah')}</div>
-  <div class="card row"><span><b>Pasangan ikut radd</b><br><span class="sub">Sisa dibagi ulang termasuk suami/istri (Pasal 193)</span></span>${tg('radd',S.radd,'Pasangan ikut radd')}</div></main>`;
+  </main>`;
   f='<button class="btn" data-a="next">Hitung waris</button>';
  }else{
   const r=S.res;h=head(4,'Bagian tiap ahli waris','Ketuk kartu mana saja untuk melihat rincian hitungannya.',1)+'<main>';
@@ -143,17 +143,17 @@ function view(){
    for(const [bi,b] of r.bagian.entries()){
     const ds=dalilHtml(b);
     h+=`<div class="card tap" data-a="det" data-i="${bi}">${b.jalur&&b.jalur!=='Pewaris'?`<div class="sub" style="margin-bottom:4px">${esc(jl(b.jalur))}</div>`:''}<div class="row"><b>${esc(nm(b.nama))}${b.jumlah>1?' × '+b.jumlah:''}</b><span class="big">${b.pecahan}</span></div><div class="row sub"><span>${b.persen}%${b.jumlah>1?' untuk seluruhnya':''}</span><span>${hasRp?rp(b.rupiah||0):''}</span></div>${b.jumlah>1&&hasRp?`<div class="sub">± ${rp((b.rupiah||0)/b.jumlah)} per orang</div>`:''}${pT(b)}${tb(b)}${ds}<div class="lk" style="margin-top:8px">Rincian hitungan ›</div></div>`}
-   h+='';
+   h+=sisaCard();
    if(r.catatan.length)h+=`<div class="note"><b>Catatan</b><br>${r.catatan.map(cat).map(esc).join('<br>')}</div>`;
    h+='<div class="note">Alat bantu hitung berdasarkan KHI dan metode praktis. Bukan fatwa atau putusan. Untuk keputusan akhir, tanyakan ke ahli faraidh atau Pengadilan Agama.</div>';
   }
   h+='</main>';f='<button class="btn2" data-a="copy" style="margin-bottom:8px">Salin hasil</button><button class="btn" data-a="reset">Mulai baru</button>';
  }
- if(S.pop)h+=popup();
+ if(S.pop)h+=popup();if(S.ask)h+=askHtml();if(S.ntc)h+=ntcHtml();
  if(S.det!==null&&S.res&&S.step===3)h+=detSheet();
- return h+(S.pop||S.det!==null?'':`<footer>${f}</footer>`);
+ return h+(S.pop||S.ask||S.ntc||S.det!==null?'':`<footer>${f}</footer>`);
 }
-function popup(){
+function sisaVal(k){try{const r0=S.eng.hitung({...k,radd:false});if(r0.status!=='ok')return null;const f=WarisJS.Fr.of(1).sub(r0.total),v=f.num();return v>1e-9?{v,p:String(f)}:null}catch(e){return null}} const sigA=()=>JSON.stringify([S.jk,S.istri,S.suami,S.list]); const pctS=v=>String(Math.round(v*1e4)/100).replace('.',',')+'%'; const askHtml=()=>`<div class="ov"><div class="sheet" role="dialog"><b style="font-size:18px">Ada sisa harta</b><p style="margin:8px 0">Sisa ${S.ask.p} (${pctS(S.ask.v)}) belum ada penerimanya karena tidak ada ahli waris ashabah. Apakah pewaris masih punya ayah, ibu, kakek, nenek, saudara, atau paman yang masih hidup?</p><button class="btn" data-a="askyes">Ya, tambah ahli waris</button><button class="btn2" data-a="askno">Tidak ada, lanjut</button></div></div>`; const ntcHtml=()=>`<div class="ov"><div class="sheet" role="dialog"><b style="font-size:18px">Perhatian</b><p style="margin:8px 0">${esc(S.ntc)}</p><button class="btn" data-a="ntcx">Oke</button></div></div>`; function sisaCard(){const s=S.sisa;if(!s)return '';const ada=S.harta&&S.harta.dibagi>0,spN=S.jk==='L'?S.istri:S.suami,oth=S.res.bagian.filter(b=>b.jalur==='Pewaris'&&b.kunci!=='istri'&&b.kunci!=='suami'&&b.pecahan!=='0').length;  return `<div class="card"><div class="row"><b>Sisa harta</b><span class="big">${s.p}</span></div><div class="row sub"><span>${pctS(s.v)} · ${S.baitul?'tidak dibagi':'sudah dibagi lewat radd'}</span><span>${ada?rp(s.v*S.harta.dibagi):''}</span></div><p class="note" style="margin:8px 0">Tidak ada ashabah. Pilih cara pembagian sisa:</p>${seg('rm',S.baitul?'b':'r',[['r','Radd ke ahli waris'],['b','Baitul Mal']])}${!S.baitul&&spN>0&&oth>0?`<div class="row" style="margin-top:10px"><span><b>Pasangan ikut radd</b><br><span class="sub">Sesuai Pasal 193 KHI; jumhur ulama tidak</span></span>${tg('radd',S.radd,'Pasangan ikut radd')}</div>`:''}<p class="note" style="margin:8px 0 0">${S.baitul?'Sisa tidak dibagi ke ahli waris dan diserahkan ke Baitul Mal (tanpa radd).':'Sisa dibagi ulang ke ahli waris sesuai bagiannya (Pasal 193 KHI).'} Tanyakan ke ahli faraidh atau Pengadilan Agama.</p></div>`} function popup(){
  const p=S.pop,R=REL[p.r],key=relKey(p.r,p.g),st=p.st||'h',canB=PGT.has(key);
  const opts=[['h','Hidup']].concat(canB?[['b','Wafat sebelum']]:[]).concat([['a','Wafat sesudah']]);
  return `<div class="ov"><div class="sheet" role="dialog" aria-label="Tambah ahli waris"><b style="font-size:18px">${p.i<0?'Tambah':'Ubah'} ahli waris</b>
@@ -169,17 +169,17 @@ function popup(){
 }
 function hitung(){
  const bersama=S.jk==='L'?S.b.slice(0,S.istri):(S.suami?(S.b[0]||0):0);
- const k={pewaris:{jk:S.jk},ahli_waris:{heirs:heirs(),wafat_sebelum:wafatB(),wafat_sesudah:wafatA()},harta:{bawaan:S.m.bawaan,bersama,utang:S.m.utang,biaya_jenazah:S.m.jenazah,wasiat:S.m.wasiat},musytarikah:S.musy,radd_pasangan:S.radd};
- try{const raw=S.eng.hitung(k);S.res=WarisJS.ringkas(raw);const hh=raw.harta;S.harta=hh?{tirkah:hh.tirkah.num(),bersih:hh.bersih.num(),wasiat:hh.wasiat.num(),dibagi:hh.dibagi.num(),milik:hh.milik_pasangan.num()}:null}catch(e){S.res={status:'error',catatan:['Terjadi kesalahan hitung: '+e.message],bagian:[]}}
+ const k={pewaris:{jk:S.jk},ahli_waris:{heirs:heirs(),wafat_sebelum:wafatB(),wafat_sesudah:wafatA()},harta:{bawaan:S.m.bawaan,bersama,utang:S.m.utang,biaya_jenazah:S.m.jenazah,wasiat:S.m.wasiat},musytarikah:S.musy,radd_pasangan:S.radd,radd:!S.baitul};
+ try{const raw=S.eng.hitung(k);S.res=WarisJS.ringkas(raw);S.sisa=sisaVal(k);const hh=raw.harta;S.harta=hh?{tirkah:hh.tirkah.num(),bersih:hh.bersih.num(),wasiat:hh.wasiat.num(),dibagi:hh.dibagi.num(),milik:hh.milik_pasangan.num()}:null}catch(e){S.res={status:'error',catatan:['Terjadi kesalahan hitung: '+e.message],bagian:[]}}
 }
 function render(keep){const a=document.getElementById('app'),y=window.scrollY;a.innerHTML=view();window.scrollTo(0,keep?y:0)}
 function act(a,el){
  const id=el.dataset.id,v=el.dataset.v,P=S.pop;if(P&&a!=='save')P.err='';if(a==='reset'||a==='back'||a==='next')S.det=null;
  if(a==='jk'){S.jk=v;S.list=S.list.filter(x=>!(v==='P'&&x.ke))}
  else if(a==='suami')S.suami=S.suami?0:1;
- else if(a==='inc'||a==='dec'){const d=a==='inc'?1:-1;if(id==='istri')S.istri=Math.min(4,Math.max(0,S.istri+d));else if(id==='pn')P.n=Math.min(ONE.has(relKey(P.r,P.g))?1:9,Math.max(1,P.n+d));else if(id==='kl')P.kt.lk=Math.min(9,Math.max(0,P.kt.lk+d));else if(id==='kp')P.kt.pr=Math.min(9,Math.max(0,P.kt.pr+d));else if(id.startsWith('s.')){const k=id.slice(2),m=SUBL(relKey(P.r,P.g)).find(x=>x[0]===k)[2];P.sub[k]=Math.min(m,Math.max(0,(P.sub[k]||0)+d))}}
- else if(a==='next'){if(S.step===2)hitung();S.step++}
- else if(a==='back'||a==='reset'){if(a==='reset'){S.step=0;S.list=[];S.m={bawaan:0,utang:0,jenazah:0,wasiat:0};S.b=[];S.res=null}else S.step--}
+ else if(a==='inc'||a==='dec'){const d=a==='inc'?1:-1;if(id==='istri'){if(d>0&&S.istri>=4)S.ntc='Istri maksimal 4.';S.istri=Math.min(4,Math.max(0,S.istri+d))}else if(id==='pn')P.n=Math.min(ONE.has(relKey(P.r,P.g))?1:9,Math.max(1,P.n+d));else if(id==='kl')P.kt.lk=Math.min(9,Math.max(0,P.kt.lk+d));else if(id==='kp')P.kt.pr=Math.min(9,Math.max(0,P.kt.pr+d));else if(id.startsWith('s.')){const k=id.slice(2),m=SUBL(relKey(P.r,P.g)).find(x=>x[0]===k)[2];P.sub[k]=Math.min(m,Math.max(0,(P.sub[k]||0)+d))}}
+ else if(a==='askyes'){S.ask=null;S.pop={i:-1,r:0,g:'L',n:1,ke:1,st:'h',kt:{lk:1,pr:0},sub:{}}}else if(a==='askno'){S.askNo=sigA();S.ask=null;S.step++}else if(a==='ntcx')S.ntc='';else if(a==='rm'){S.baitul=v==='b';hitung()}else if(a==='next'){if(S.step===1){const s=sisaVal({pewaris:{jk:S.jk},ahli_waris:{heirs:heirs(),wafat_sebelum:wafatB(),wafat_sesudah:wafatA()},musytarikah:S.musy,radd_pasangan:S.radd});if(s&&S.askNo!==sigA()){S.ask=s;render();return}}if(S.step===2)hitung();S.step++}
+ else if(a==='back'||a==='reset'){if(a==='reset'){S.step=0;S.list=[];S.m={bawaan:0,utang:0,jenazah:0,wasiat:0};S.b=[];S.res=null;S.baitul=false;S.askNo='';S.sisa=null}else S.step--}
  else if(a==='det')S.det=+el.dataset.i;else if(a==='detx')S.det=null;
  else if(a==='add')S.pop={i:-1,r:0,g:'L',n:1,ke:1,st:'h',kt:{lk:1,pr:0},sub:{}};
  else if(a==='edit'){const it=S.list[+el.dataset.i];S.pop={...it,i:+el.dataset.i,ke:it.ke||1,st:it.st||'h',kt:{...(it.kt||{lk:1,pr:0})},sub:{...(it.sub||{})}}}
@@ -192,9 +192,9 @@ function act(a,el){
   if(st==='b')it.kt={lk:P.kt.lk,pr:P.kt.pr};
   const key=relKey(it.r,it.g);if(P.i>=0)S.list.splice(P.i,1);
   const j=st==='h'?S.list.findIndex(x=>(x.st||'h')==='h'&&relKey(x.r,x.g)===key&&x.ke===it.ke):-1;if(j>=0)S.list[j].n=Math.min(ONE.has(key)?1:99,S.list[j].n+it.n);else S.list.push(it);S.pop=null}
- else if(a==='musy')S.musy=!S.musy;else if(a==='radd')S.radd=!S.radd;
+ else if(a==='musy')S.musy=!S.musy;else if(a==='radd'){S.radd=!S.radd;if(S.step===3)hitung()}
  else if(a==='copy'){const t=S.res.bagian.map(b=>(b.jalur&&b.jalur!=='Pewaris'?'['+jl(b.jalur)+'] ':'')+nm(b.nama)+(b.jumlah>1?' x'+b.jumlah:'')+': '+b.pecahan+(b.rupiah?' ('+rp(b.rupiah)+')':'')).join('\n')+(()=>{const p=pas(S.res);return p?'\n\n'+p.T+' hidup, total: '+p.rows.map(x=>(p.n>1?x.l+' ':'')+'1/2 harta bersama '+rp(x.h)+' + warisan '+rp(x.w)+' = '+rp(x.t)).join('; '):''})()+'\n\nAlat bantu, bukan fatwa.';try{navigator.clipboard.writeText(t.replace(/\u00a0/g,' '));el.textContent='Tersalin'}catch(e){}return}
- render(a==='det'||a==='detx');
+ render(a==='det'||a==='detx'||a==='rm'||a==='radd');
 }
 document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(el&&S.data){if(el.dataset.a==='det'&&e.target.closest('details'))return;act(el.dataset.a,el)}});
 document.addEventListener('input',e=>{const f=e.target.dataset.f;if(!f)return;if(f==='nama')S.nama=e.target.value;else if(f[0]==='m')S.m[f.slice(2)]=num(e.target.value);else if(f[0]==='b')S.b[+f.slice(2)]=num(e.target.value);
