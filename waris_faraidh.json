@@ -1,0 +1,6270 @@
+{
+ "catatan": {
+  "cara_baca": "jadwal(baris=r, kolom=c) = bagian/status ahli waris bernomor c bila ahli waris bernomor r (r>c) hadir. baris 0 = bagian c bila sendirian. Untuk tiap ahli waris hadir, kumpulkan sel dari semua baris hadir yang lebih besar + baris 0, lalu pilih kelas terkecil (Tabel V).",
+  "sumber": "Isi_Hukum_Waris (Tabel III Jadwal Fara-idl, Tabel IV, Tabel V, KPT) ditranskrip dari foto; kode Λ dan A dianggap sama (ashabah).",
+  "tidak_dicantumkan": "Dua ahli waris tidak dicantumkan karena tidak ada di Indonesia (menurut keterangan di gambar).",
+  "akdariyah": "Kasus Akdariyah (suami, ibu, kakek, saudari sekandung): asal masalah 6+3=9, dikali 3 jadi 27 (Tabel II, sudah ditranskrip di jadwal_ii).",
+  "tabel_I_II": "Tabel I belum ada (tidak ada di docx). Tabel II sudah (jadwal_ii).",
+  "tabel_II": "Tabel II (Akdariyah, 6+3=9 x3=27) sudah ditranskrip: 15 sel, 7 terisi. Cara pakai masih dugaan.",
+  "tabel_I": "Tabel I tidak ada di docx dan tidak ketemu di web. Kuat dugaan = Musytarakah (saudara kandung berserikat dgn seibu dalam 1/3, dibagi rata). Isi belum terverifikasi.",
+  "tabel_VII_VIII": "Tabel VII (tabel_vii) dan Tabel VIII (tabel_viii, 29 dalil) sudah ada. Tabel VII ditranskrip dari gambar; sel ambigu ditandai di 'tinjau'. Dalil diambil dari teks docx.",
+  "khi_ringkasan": "Ringkasan KHI Pasal 176-182 + ayat dari gambar EMF di docx; memverifikasi ibu 1/3 sisa (178:2).",
+  "tabel_II_tinjau": "Sel Tabel II ibu = 1/3, tapi hasil klasik ibu 6/27 (=2/9); kemungkinan pecahan sebelum aul. Verifikasi sebelum dipakai di mesin hitung."
+ },
+ "ahli_waris": [
+  {
+   "kode": "A",
+   "nama": "Anak laki-laki",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 31,
+   "angka_lebih": 31
+  },
+  {
+   "kode": "B",
+   "nama": "Cucu laki-laki (anak A)",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 30,
+   "angka_lebih": 30
+  },
+  {
+   "kode": "C",
+   "nama": "Ayah",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 24,
+   "angka_lebih": null
+  },
+  {
+   "kode": "D",
+   "nama": "Saudara laki-laki I (sekandung)",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 20,
+   "angka_lebih": 21
+  },
+  {
+   "kode": "E",
+   "nama": "Saudara laki-laki II (seayah)",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 16,
+   "angka_lebih": 17
+  },
+  {
+   "kode": "F",
+   "nama": "Kakek (ayah C)",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 22,
+   "angka_lebih": null
+  },
+  {
+   "kode": "G",
+   "nama": "Kemenakan laki-laki I (anak D)",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 6,
+   "angka_lebih": 6
+  },
+  {
+   "kode": "H",
+   "nama": "Kemenakan laki-laki II (anak E)",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 5,
+   "angka_lebih": 5
+  },
+  {
+   "kode": "I",
+   "nama": "Paman I (saudara C)",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 4,
+   "angka_lebih": 4
+  },
+  {
+   "kode": "J",
+   "nama": "Paman II (saudara C)",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 3,
+   "angka_lebih": 3
+  },
+  {
+   "kode": "K",
+   "nama": "Sepupu laki-laki I (anak I)",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 2,
+   "angka_lebih": 2
+  },
+  {
+   "kode": "L",
+   "nama": "Sepupu laki-laki II (anak J)",
+   "pihak": "laki-laki",
+   "golongan": "ashabah",
+   "angka_satu": 1,
+   "angka_lebih": 1
+  },
+  {
+   "kode": "M",
+   "nama": "Suami",
+   "pihak": "laki-laki",
+   "golongan": "dzawil furudh",
+   "angka_satu": 25,
+   "angka_lebih": null
+  },
+  {
+   "kode": "N",
+   "nama": "Saudara laki-laki III (seibu)",
+   "pihak": "laki-laki",
+   "golongan": "dzawil furudh",
+   "angka_satu": 11,
+   "angka_lebih": 13
+  },
+  {
+   "kode": "O",
+   "nama": "Istri",
+   "pihak": "perempuan",
+   "golongan": "dzawil furudh",
+   "angka_satu": 23,
+   "angka_lebih": 23
+  },
+  {
+   "kode": "P",
+   "nama": "Anak perempuan",
+   "pihak": "perempuan",
+   "golongan": "dzawil furudh",
+   "angka_satu": 28,
+   "angka_lebih": 29
+  },
+  {
+   "kode": "Q",
+   "nama": "Cucu perempuan (anak A)",
+   "pihak": "perempuan",
+   "golongan": "dzawil furudh",
+   "angka_satu": 26,
+   "angka_lebih": 27
+  },
+  {
+   "kode": "R",
+   "nama": "Ibu",
+   "pihak": "perempuan",
+   "golongan": "dzawil furudh",
+   "angka_satu": 9,
+   "angka_lebih": null
+  },
+  {
+   "kode": "S",
+   "nama": "Nenek II (ibu C)",
+   "pihak": "perempuan",
+   "golongan": "dzawil furudh",
+   "angka_satu": 7,
+   "angka_lebih": null
+  },
+  {
+   "kode": "T",
+   "nama": "Nenek III (ibu R)",
+   "pihak": "perempuan",
+   "golongan": "dzawil furudh",
+   "angka_satu": 8,
+   "angka_lebih": null
+  },
+  {
+   "kode": "U",
+   "nama": "Saudari I (sekandung)",
+   "pihak": "perempuan",
+   "golongan": "dzawil furudh",
+   "angka_satu": 19,
+   "angka_lebih": 18
+  },
+  {
+   "kode": "V",
+   "nama": "Saudari II (seayah)",
+   "pihak": "perempuan",
+   "golongan": "dzawil furudh",
+   "angka_satu": 15,
+   "angka_lebih": 14
+  },
+  {
+   "kode": "W",
+   "nama": "Saudari III (seibu)",
+   "pihak": "perempuan",
+   "golongan": "dzawil furudh",
+   "angka_satu": 10,
+   "angka_lebih": 12
+  }
+ ],
+ "nomor": [
+  {
+   "no": 1,
+   "kode": "L",
+   "jumlah": "tetap",
+   "nama": "Sepupu laki-laki II (anak paman II)"
+  },
+  {
+   "no": 2,
+   "kode": "K",
+   "jumlah": "tetap",
+   "nama": "Sepupu laki-laki I (anak paman I)"
+  },
+  {
+   "no": 3,
+   "kode": "J",
+   "jumlah": "tetap",
+   "nama": "Paman II (saudara ayah, seayah)"
+  },
+  {
+   "no": 4,
+   "kode": "I",
+   "jumlah": "tetap",
+   "nama": "Paman I (saudara ayah, sekandung)"
+  },
+  {
+   "no": 5,
+   "kode": "H",
+   "jumlah": "tetap",
+   "nama": "Kemenakan laki-laki II (anak saudara seayah)"
+  },
+  {
+   "no": 6,
+   "kode": "G",
+   "jumlah": "tetap",
+   "nama": "Kemenakan laki-laki I (anak saudara sekandung)"
+  },
+  {
+   "no": 7,
+   "kode": "S",
+   "jumlah": "tetap",
+   "nama": "Nenek II (ibu dari ayah)"
+  },
+  {
+   "no": 8,
+   "kode": "T",
+   "jumlah": "tetap",
+   "nama": "Nenek III (ibu dari ibu)"
+  },
+  {
+   "no": 9,
+   "kode": "R",
+   "jumlah": "tetap",
+   "nama": "Ibu"
+  },
+  {
+   "no": 10,
+   "kode": "W",
+   "jumlah": "satu",
+   "nama": "Saudari seibu (1)"
+  },
+  {
+   "no": 11,
+   "kode": "N",
+   "jumlah": "satu",
+   "nama": "Saudara laki-laki seibu (1)"
+  },
+  {
+   "no": 12,
+   "kode": "W",
+   "jumlah": "lebih",
+   "nama": "Saudari seibu (2+)"
+  },
+  {
+   "no": 13,
+   "kode": "N",
+   "jumlah": "lebih",
+   "nama": "Saudara laki-laki seibu (2+)"
+  },
+  {
+   "no": 14,
+   "kode": "V",
+   "jumlah": "lebih",
+   "nama": "Saudari seayah (2+)"
+  },
+  {
+   "no": 15,
+   "kode": "V",
+   "jumlah": "satu",
+   "nama": "Saudari seayah (1)"
+  },
+  {
+   "no": 16,
+   "kode": "E",
+   "jumlah": "satu",
+   "nama": "Saudara laki-laki seayah (1)"
+  },
+  {
+   "no": 17,
+   "kode": "E",
+   "jumlah": "lebih",
+   "nama": "Saudara laki-laki seayah (2+)"
+  },
+  {
+   "no": 18,
+   "kode": "U",
+   "jumlah": "lebih",
+   "nama": "Saudari sekandung (2+)"
+  },
+  {
+   "no": 19,
+   "kode": "U",
+   "jumlah": "satu",
+   "nama": "Saudari sekandung (1)"
+  },
+  {
+   "no": 20,
+   "kode": "D",
+   "jumlah": "satu",
+   "nama": "Saudara laki-laki sekandung (1)"
+  },
+  {
+   "no": 21,
+   "kode": "D",
+   "jumlah": "lebih",
+   "nama": "Saudara laki-laki sekandung (2+)"
+  },
+  {
+   "no": 22,
+   "kode": "F",
+   "jumlah": "tetap",
+   "nama": "Kakek (ayah dari ayah)"
+  },
+  {
+   "no": 23,
+   "kode": "O",
+   "jumlah": "tetap",
+   "nama": "Istri"
+  },
+  {
+   "no": 24,
+   "kode": "C",
+   "jumlah": "tetap",
+   "nama": "Ayah"
+  },
+  {
+   "no": 25,
+   "kode": "M",
+   "jumlah": "tetap",
+   "nama": "Suami"
+  },
+  {
+   "no": 26,
+   "kode": "Q",
+   "jumlah": "satu",
+   "nama": "Cucu perempuan (1 orang)"
+  },
+  {
+   "no": 27,
+   "kode": "Q",
+   "jumlah": "lebih",
+   "nama": "Cucu perempuan (2 orang atau lebih)"
+  },
+  {
+   "no": 28,
+   "kode": "P",
+   "jumlah": "satu",
+   "nama": "Anak perempuan (1 orang)"
+  },
+  {
+   "no": 29,
+   "kode": "P",
+   "jumlah": "lebih",
+   "nama": "Anak perempuan (2 orang atau lebih)"
+  },
+  {
+   "no": 30,
+   "kode": "B",
+   "jumlah": "tetap",
+   "nama": "Cucu laki-laki (anak dari anak laki-laki)"
+  },
+  {
+   "no": 31,
+   "kode": "A",
+   "jumlah": "tetap",
+   "nama": "Anak laki-laki"
+  }
+ ],
+ "kelas": [
+  {
+   "kelas": 18,
+   "rumus": "2/3",
+   "keterangan": "Dua per tiga"
+  },
+  {
+   "kelas": 17,
+   "rumus": "1/2",
+   "keterangan": "Seperdua (separuh)"
+  },
+  {
+   "kelas": 16,
+   "rumus": "1/3",
+   "keterangan": "Sepertiga"
+  },
+  {
+   "kelas": 16,
+   "rumus": "1/3a",
+   "keterangan": "Sama 1/3 klas 16 tanpa-a. Jika 1/3a dan 1/3b kumpul dalam satu lajur, berubah turun menjadi 1/IV (seperempat) klas 15"
+  },
+  {
+   "kelas": 16,
+   "rumus": "1/3b",
+   "keterangan": "Sama 1/3 klas 16 tanpa-b. Jika 1/3a dan 1/3b kumpul dalam satu lajur, berubah turun menjadi 1/IV (seperempat) klas 15"
+  },
+  {
+   "kelas": 16,
+   "rumus": "1/3c",
+   "keterangan": "Sama 1/3 klas 16 tanpa c. Jika 1/3c berkumpul dengan 1/3b dalam satu lajur, berubah turun menjadi 1/VI (seperenam) klas 9"
+  },
+  {
+   "kelas": 16,
+   "rumus": "1/3d",
+   "keterangan": "Sama 1/3 klas 16 tanpa d. Jika dalam satu lajur ada dua 1/3d, berubah turun menjadi 1/6 (seperenam) klas 10"
+  },
+  {
+   "kelas": 15,
+   "rumus": "1/IV",
+   "keterangan": "Seperempat, sama dengan 1/4 klas 14, hanya ditulis angka Rumawi"
+  },
+  {
+   "kelas": 14,
+   "rumus": "1/4",
+   "keterangan": "Seperempat"
+  },
+  {
+   "kelas": 13,
+   "rumus": "As",
+   "keterangan": "Ashabah, mendapat semua peninggalan atau sisa"
+  },
+  {
+   "kelas": 12,
+   "rumus": "1/6A",
+   "keterangan": "Ashabah sesudah mendapat 1/6. Jika kakek bersama saudara, ia mendapat sekurang-kurangnya 1/6 jumlah pusaka atau 1/3 jumlah milik para ashabah, asal tidak kalah dari seorang saudara laki-laki atau dua saudari"
+  },
+  {
+   "kelas": 11,
+   "rumus": "1/6 As",
+   "keterangan": "Mendapat 1/6 (fardlan) dan mendapat sisa (ta'shibah)"
+  },
+  {
+   "kelas": 10,
+   "rumus": "1/6 (Arab)",
+   "keterangan": "Seperenam, sama dengan 1/6 klas 8, hanya ditulis angka Arab"
+  },
+  {
+   "kelas": 9,
+   "rumus": "1/VI",
+   "keterangan": "Seperenam, sama dengan 1/6 klas 8, hanya ditulis angka Rumawi"
+  },
+  {
+   "kelas": 8,
+   "rumus": "1/6",
+   "keterangan": "Seperenam"
+  },
+  {
+   "kelas": 7,
+   "rumus": "1/8",
+   "keterangan": "Seperdelapan"
+  },
+  {
+   "kelas": 6,
+   "rumus": "←S",
+   "keterangan": "Menggabungkan diri pada angka merah yang terpanah saat mengadu angka di Tabel III; pria dan wanita mendapat bagian sama banyak"
+  },
+  {
+   "kelas": 5,
+   "rumus": "A I",
+   "keterangan": "Ashabah. Jika kehabisan atau bagian tiap saudara kandung lebih kecil dari bagian tiap saudara seibu, bagi dengan Tabel I"
+  },
+  {
+   "kelas": 4,
+   "rumus": "A II",
+   "keterangan": "Ashabah, mendapat sisa. (1) Jika kehabisan bagi dengan Tabel II; (2) jika ada dua A II, sisa dari kakek dijadikan 4 bagian, 3 untuk A II angka 19 dan 1 untuk A II lainnya; (3) jika A II bersama A saja dan sisa dari kakek lebih dari separuh pusaka, separuh untuk A II dan lebihnya untuk A"
+  },
+  {
+   "kelas": 3,
+   "rumus": "A",
+   "keterangan": "Ashabah mendapat sisa"
+  },
+  {
+   "kelas": 2,
+   "rumus": "Mj",
+   "keterangan": "Mahjub (terhalang), tidak mendapat apa-apa"
+  },
+  {
+   "kelas": 3,
+   "rumus": "A.M / A.j",
+   "keterangan": "A = ashabah kelas 3. M atau j hanya penanda (bonceng). Bila M dan j sama-sama ada dalam satu lajur, digabung menjadi Mj (mahjub, kelas 2). Bila hanya salah satu, penanda dibuang"
+  },
+  {
+   "kelas": 1,
+   "rumus": "←1/2",
+   "keterangan": "Ikut menjadi ashabah pada angka merah yang terpanah (ashabah bil ghair); laki-laki mendapat sama dengan 2 perempuan"
+  },
+  {
+   "kelas": 1,
+   "rumus": "1/6 M",
+   "keterangan": "Sama dengan 1/6 kelas 8, tetapi bila 1/6M berkumpul dengan dua Aj dalam satu lajur, turun menjadi Mj kelas 2"
+  }
+ ],
+ "jadwal": [
+  {
+   "baris": 2,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 3,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 3,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 4,
+   "kolom": 3,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 4,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 4,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 5,
+   "kolom": 4,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 5,
+   "kolom": 3,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 5,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 5,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 6,
+   "kolom": 5,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 6,
+   "kolom": 4,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 6,
+   "kolom": 3,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 6,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 6,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 7,
+   "kolom": 6,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 7,
+   "kolom": 5,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 7,
+   "kolom": 4,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 7,
+   "kolom": 3,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 7,
+   "kolom": 2,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 7,
+   "kolom": 1,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 8,
+   "kolom": 7,
+   "raw": "←",
+   "tipe": "gabung_sama_banyak",
+   "kelas": 6,
+   "nilai": null,
+   "marker": null,
+   "tinjau": "Tercetak ← tanpa S; dianggap ←S (kelas 6)"
+  },
+  {
+   "baris": 8,
+   "kolom": 6,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 8,
+   "kolom": 5,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 8,
+   "kolom": 4,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 8,
+   "kolom": 3,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 8,
+   "kolom": 2,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 8,
+   "kolom": 1,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 9,
+   "kolom": 8,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 9,
+   "kolom": 7,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 9,
+   "kolom": 6,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 9,
+   "kolom": 5,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 9,
+   "kolom": 4,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 9,
+   "kolom": 3,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 9,
+   "kolom": 2,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 9,
+   "kolom": 1,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 10,
+   "kolom": 9,
+   "raw": "1/3d",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 10,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 10,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 10,
+   "kolom": 6,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 10,
+   "kolom": 5,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 10,
+   "kolom": 4,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 10,
+   "kolom": 3,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 10,
+   "kolom": 2,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 10,
+   "kolom": 1,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 11,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 11,
+   "kolom": 9,
+   "raw": "1/3d",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 11,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 11,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 11,
+   "kolom": 6,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 11,
+   "kolom": 5,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 11,
+   "kolom": 4,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 11,
+   "kolom": 3,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 11,
+   "kolom": 2,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 11,
+   "kolom": 1,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 12,
+   "kolom": 11,
+   "raw": "←s",
+   "tipe": "gabung_sama_banyak",
+   "kelas": 6,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 12,
+   "kolom": 10,
+   "raw": "—",
+   "tipe": "tidak_mungkin",
+   "kelas": null,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 12,
+   "kolom": 9,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "nilai_koreksi": "1/6",
+   "tinjau": "Tercetak 1/4; seharusnya 1/6 (Pasal 178 KHI, ibu dengan 2+ saudara)"
+  },
+  {
+   "baris": 12,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 12,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 12,
+   "kolom": 6,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 12,
+   "kolom": 5,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 12,
+   "kolom": 4,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 12,
+   "kolom": 3,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 12,
+   "kolom": 2,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 12,
+   "kolom": 1,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 13,
+   "kolom": 12,
+   "raw": "←s",
+   "tipe": "gabung_sama_banyak",
+   "kelas": 6,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 13,
+   "kolom": 11,
+   "raw": "—",
+   "tipe": "tidak_mungkin",
+   "kelas": null,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 13,
+   "kolom": 10,
+   "raw": "←s",
+   "tipe": "gabung_sama_banyak",
+   "kelas": 6,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 13,
+   "kolom": 9,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "nilai_koreksi": "1/6",
+   "tinjau": "Tercetak 1/4; seharusnya 1/6 (Pasal 178 KHI, ibu dengan 2+ saudara)"
+  },
+  {
+   "baris": 13,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 13,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 13,
+   "kolom": 6,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 13,
+   "kolom": 5,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 13,
+   "kolom": 4,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 13,
+   "kolom": 3,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 13,
+   "kolom": 2,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 13,
+   "kolom": 1,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 13,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 12,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 11,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 9,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "nilai_koreksi": "1/6",
+   "tinjau": "Tercetak 1/4; seharusnya 1/6 (Pasal 178 KHI, ibu dengan 2+ saudara)"
+  },
+  {
+   "baris": 14,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 6,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 5,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 4,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 3,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 2,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 14,
+   "kolom": 1,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 14,
+   "raw": "—",
+   "tipe": "tidak_mungkin",
+   "kelas": null,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 13,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 12,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 11,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 9,
+   "raw": "1/3d",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 6,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 5,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 4,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 3,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 2,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 15,
+   "kolom": 1,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 15,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 14,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 13,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 12,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 11,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 9,
+   "raw": "1/3d",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 6,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 5,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 4,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 3,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 16,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 16,
+   "raw": "—",
+   "tipe": "tidak_mungkin",
+   "kelas": null,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 15,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 14,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 13,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 12,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 11,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 9,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "nilai_koreksi": "1/6",
+   "tinjau": "Tercetak 1/4; seharusnya 1/6 (Pasal 178 KHI, ibu dengan 2+ saudara)"
+  },
+  {
+   "baris": 17,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 6,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 5,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 4,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 3,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 17,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 17,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 16,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 15,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 14,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 13,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 12,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 11,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 9,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "nilai_koreksi": "1/6",
+   "tinjau": "Tercetak 1/4; seharusnya 1/6 (Pasal 178 KHI, ibu dengan 2+ saudara)"
+  },
+  {
+   "baris": 18,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 6,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 5,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 4,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 3,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 2,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 18,
+   "kolom": 1,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 18,
+   "raw": "—",
+   "tipe": "tidak_mungkin",
+   "kelas": null,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 17,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 16,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 15,
+   "raw": "1/6M",
+   "tipe": "furudh",
+   "kelas": 1,
+   "nilai": "1/6",
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 14,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 13,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 12,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 11,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 9,
+   "raw": "1/3d",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 6,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 5,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 4,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 3,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 2,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 19,
+   "kolom": 1,
+   "raw": "A.M",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 19,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 18,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 17,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 16,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 15,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 14,
+   "raw": "M",
+   "tipe": "penanda",
+   "kelas": null,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": "Penanda M tunggal: dibuang kecuali ada penanda j dalam lajur yang sama (Tabel V)"
+  },
+  {
+   "baris": 20,
+   "kolom": 13,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 12,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 11,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 9,
+   "raw": "1/3d",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 6,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 5,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 4,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 3,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 20,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 20,
+   "raw": "—",
+   "tipe": "tidak_mungkin",
+   "kelas": null,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 19,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 18,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 17,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 16,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 15,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 14,
+   "raw": "M",
+   "tipe": "penanda",
+   "kelas": null,
+   "nilai": null,
+   "marker": "M",
+   "tinjau": "Penanda M tunggal: dibuang kecuali ada penanda j dalam lajur yang sama (Tabel V)"
+  },
+  {
+   "baris": 21,
+   "kolom": 13,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 12,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 11,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 9,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "nilai_koreksi": "1/6",
+   "tinjau": "Tercetak 1/4; seharusnya 1/6 (Pasal 178 KHI, ibu dengan 2+ saudara)"
+  },
+  {
+   "baris": 21,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 6,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 5,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 4,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 3,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 21,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 21,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 20,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 19,
+   "raw": "AII",
+   "tipe": "ashabah_AII",
+   "kelas": 4,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 18,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 17,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 16,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 15,
+   "raw": "AII",
+   "tipe": "ashabah_AII",
+   "kelas": 4,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 14,
+   "raw": "AI",
+   "tipe": "ashabah_AI",
+   "kelas": 5,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 13,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 12,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 11,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 10,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 9,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 6,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 5,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 4,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 3,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 22,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 22,
+   "raw": "1/6A",
+   "tipe": "furudh_plus_ashabah",
+   "kelas": 12,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 21,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 20,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 19,
+   "raw": "1/2",
+   "tipe": "furudh",
+   "kelas": 17,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 18,
+   "raw": "2/3",
+   "tipe": "furudh",
+   "kelas": 18,
+   "nilai": "2/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 17,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 16,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 15,
+   "raw": "1/2",
+   "tipe": "furudh",
+   "kelas": 17,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 14,
+   "raw": "2/3",
+   "tipe": "furudh",
+   "kelas": 18,
+   "nilai": "2/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 13,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 12,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 11,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 9,
+   "raw": "1/3a",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 6,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 5,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 4,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 3,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 2,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 23,
+   "kolom": 1,
+   "raw": "A",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 23,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 22,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 21,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 20,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 19,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 18,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 17,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 16,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 15,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 14,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 13,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 12,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 11,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 10,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 9,
+   "raw": "1/3b",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 7,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 6,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 5,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 4,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 3,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 24,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 24,
+   "raw": "Λs",
+   "tipe": "sisa",
+   "kelas": 13,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 23,
+   "raw": "—",
+   "tipe": "tidak_mungkin",
+   "kelas": null,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 22,
+   "raw": "1/6Λ",
+   "tipe": "furudh_plus_ashabah",
+   "kelas": 12,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 21,
+   "raw": "Λ1",
+   "tipe": "ashabah_AI",
+   "kelas": 5,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 20,
+   "raw": "Λ1",
+   "tipe": "ashabah_AI",
+   "kelas": 5,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 19,
+   "raw": "1/2",
+   "tipe": "furudh",
+   "kelas": 17,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 18,
+   "raw": "2/3",
+   "tipe": "furudh",
+   "kelas": 18,
+   "nilai": "2/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 17,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 16,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 15,
+   "raw": "1/2",
+   "tipe": "furudh",
+   "kelas": 17,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 14,
+   "raw": "2/3",
+   "tipe": "furudh",
+   "kelas": 18,
+   "nilai": "2/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 13,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 12,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 11,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 9,
+   "raw": "1/3c",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 6,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 5,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 4,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 3,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 2,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 25,
+   "kolom": 1,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 25,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 24,
+   "raw": "1/6Λs",
+   "tipe": "furudh_plus_sisa",
+   "kelas": 11,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 23,
+   "raw": "1/8",
+   "tipe": "furudh",
+   "kelas": 7,
+   "nilai": "1/8",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 22,
+   "raw": "1/6Λ",
+   "tipe": "furudh_plus_ashabah",
+   "kelas": 12,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 21,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 20,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 19,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 18,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 17,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 16,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 15,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 14,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 13,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 12,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 11,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 10,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 9,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 6,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 5,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 4,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 3,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 2,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 26,
+   "kolom": 1,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 26,
+   "raw": "—",
+   "tipe": "tidak_mungkin",
+   "kelas": null,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 25,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 24,
+   "raw": "1/6Λs",
+   "tipe": "furudh_plus_sisa",
+   "kelas": 11,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 23,
+   "raw": "1/8",
+   "tipe": "furudh",
+   "kelas": 7,
+   "nilai": "1/8",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 22,
+   "raw": "1/6Λ",
+   "tipe": "furudh_plus_ashabah",
+   "kelas": 12,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 21,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 20,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 19,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 18,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 17,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 16,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 15,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 14,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 13,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 12,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 11,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 10,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 9,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 6,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 5,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 4,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 3,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 2,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 27,
+   "kolom": 1,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 27,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 26,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 25,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 24,
+   "raw": "1/6Λs",
+   "tipe": "furudh_plus_sisa",
+   "kelas": 11,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 23,
+   "raw": "1/8",
+   "tipe": "furudh",
+   "kelas": 7,
+   "nilai": "1/8",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 22,
+   "raw": "1/6Λ",
+   "tipe": "furudh_plus_ashabah",
+   "kelas": 12,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 21,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 20,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 19,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 18,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 17,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 16,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 15,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 14,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 13,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 12,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 11,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 10,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 9,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 6,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 5,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 4,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 3,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 2,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 28,
+   "kolom": 1,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 28,
+   "raw": "—",
+   "tipe": "tidak_mungkin",
+   "kelas": null,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 27,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 26,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 25,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 24,
+   "raw": "1/6Λs",
+   "tipe": "furudh_plus_sisa",
+   "kelas": 11,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 23,
+   "raw": "1/8",
+   "tipe": "furudh",
+   "kelas": 7,
+   "nilai": "1/8",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 22,
+   "raw": "1/6Λ",
+   "tipe": "furudh_plus_ashabah",
+   "kelas": 12,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 21,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 20,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 19,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 18,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 17,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 16,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 15,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 14,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 13,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 12,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 11,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 10,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 9,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 6,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 5,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 4,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 3,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 2,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 29,
+   "kolom": 1,
+   "raw": "Λ.j",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": "j",
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 29,
+   "raw": "2/3",
+   "tipe": "furudh",
+   "kelas": 18,
+   "nilai": "2/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 28,
+   "raw": "1/2",
+   "tipe": "furudh",
+   "kelas": 17,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 27,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 26,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 25,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 24,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 23,
+   "raw": "1/8",
+   "tipe": "furudh",
+   "kelas": 7,
+   "nilai": "1/8",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 22,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 21,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 20,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 19,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 18,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 17,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 16,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 15,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 14,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 13,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 12,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 11,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 10,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 9,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 6,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 5,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 4,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 3,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 30,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 30,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 29,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 28,
+   "raw": "←1/2",
+   "tipe": "ashabah_bil_ghair",
+   "kelas": 1,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 27,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 26,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 25,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 24,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 23,
+   "raw": "1/8",
+   "tipe": "furudh",
+   "kelas": 7,
+   "nilai": "1/8",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 22,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 21,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 20,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 19,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 18,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 17,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 16,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 15,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 14,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 13,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 12,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 11,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 10,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 9,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 6,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 5,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 4,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 3,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 2,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 31,
+   "kolom": 1,
+   "raw": "Mj",
+   "tipe": "mahjub",
+   "kelas": 2,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 31,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 30,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 29,
+   "raw": "2/3",
+   "tipe": "furudh",
+   "kelas": 18,
+   "nilai": "2/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 28,
+   "raw": "1/2",
+   "tipe": "furudh",
+   "kelas": 17,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 27,
+   "raw": "2/3",
+   "tipe": "furudh",
+   "kelas": 18,
+   "nilai": "2/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 26,
+   "raw": "1/2",
+   "tipe": "furudh",
+   "kelas": 17,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 25,
+   "raw": "1/2",
+   "tipe": "furudh",
+   "kelas": 17,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 24,
+   "raw": "Λs",
+   "tipe": "sisa",
+   "kelas": 13,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 23,
+   "raw": "1/4",
+   "tipe": "furudh",
+   "kelas": 14,
+   "nilai": "1/4",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 22,
+   "raw": "1/6Λ",
+   "tipe": "furudh_plus_ashabah",
+   "kelas": 12,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 21,
+   "raw": "Λ1",
+   "tipe": "ashabah_AI",
+   "kelas": 5,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 20,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 19,
+   "raw": "1/2",
+   "tipe": "furudh",
+   "kelas": 17,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 18,
+   "raw": "2/3",
+   "tipe": "furudh",
+   "kelas": 18,
+   "nilai": "2/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 17,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 16,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 15,
+   "raw": "1/2",
+   "tipe": "furudh",
+   "kelas": 17,
+   "nilai": "1/2",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 14,
+   "raw": "2/3",
+   "tipe": "furudh",
+   "kelas": 18,
+   "nilai": "2/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 13,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 12,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 11,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 10,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 9,
+   "raw": "1/3",
+   "tipe": "furudh",
+   "kelas": 16,
+   "nilai": "1/3",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 8,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 7,
+   "raw": "1/6",
+   "tipe": "furudh",
+   "kelas": 8,
+   "nilai": "1/6",
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 6,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 5,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 4,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 3,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 2,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  },
+  {
+   "baris": 0,
+   "kolom": 1,
+   "raw": "Λ",
+   "tipe": "ashabah",
+   "kelas": 3,
+   "nilai": null,
+   "marker": null,
+   "tinjau": null
+  }
+ ],
+ "kombinasi": [
+  {
+   "kolom": 9,
+   "baris": [
+    10,
+    11
+   ],
+   "cetak": "1/4",
+   "tabel_v": "1/6",
+   "kelas": 10,
+   "catatan": "Dua 1/3d (saudara seibu). Gambar mencetak 1/4, Tabel V menyebut 1/6 klas 10 (sesuai Pasal 178 KHI: ibu 1/6 jika ada 2+ saudara). Dipakai 1/6."
+  },
+  {
+   "kolom": 9,
+   "baris": [
+    15,
+    16
+   ],
+   "cetak": "1/4",
+   "tabel_v": "1/6",
+   "kelas": 10,
+   "catatan": "Dua 1/3d (saudara seayah). Sama seperti di atas."
+  },
+  {
+   "kolom": 9,
+   "baris": [
+    19,
+    20
+   ],
+   "cetak": "1/4",
+   "tabel_v": "1/6",
+   "kelas": 10,
+   "catatan": "Dua 1/3d (saudara sekandung). Sama seperti di atas."
+  },
+  {
+   "kolom": 9,
+   "baris": [
+    23,
+    24
+   ],
+   "cetak": "1/IV",
+   "tabel_v": "1/IV (=1/4)",
+   "kelas": 15,
+   "catatan": "1/3a + 1/3b (ibu bersama ayah dan istri): ibu 1/3 dari sisa = 1/4."
+  },
+  {
+   "kolom": 9,
+   "baris": [
+    24,
+    25
+   ],
+   "cetak": "1/IV",
+   "tabel_v": "1/VI (=1/6)",
+   "kelas": 9,
+   "catatan": "1/3b + 1/3c (ibu bersama ayah dan suami). Gambar mencetak IV, Tabel V menyebut 1/VI klas 9; 1/3 dari sisa 1/2 = 1/6. Dipakai 1/6."
+  }
+ ],
+ "kpt": [
+  {
+   "a": "1/6",
+   "b": "1/3",
+   "asal_masalah": 6
+  },
+  {
+   "a": "1/6",
+   "b": "2/3",
+   "asal_masalah": 6
+  },
+  {
+   "a": "1/6",
+   "b": "1/2",
+   "asal_masalah": 6
+  },
+  {
+   "a": "1/6",
+   "b": "1/4",
+   "asal_masalah": 12
+  },
+  {
+   "a": "1/6",
+   "b": "1/8",
+   "asal_masalah": 24
+  },
+  {
+   "a": "1/3",
+   "b": "2/3",
+   "asal_masalah": 3
+  },
+  {
+   "a": "1/3",
+   "b": "1/2",
+   "asal_masalah": 6
+  },
+  {
+   "a": "1/3",
+   "b": "1/4",
+   "asal_masalah": 12
+  },
+  {
+   "a": "1/3",
+   "b": "1/8",
+   "asal_masalah": 24
+  },
+  {
+   "a": "2/3",
+   "b": "1/2",
+   "asal_masalah": 6
+  },
+  {
+   "a": "2/3",
+   "b": "1/4",
+   "asal_masalah": 12
+  },
+  {
+   "a": "2/3",
+   "b": "1/8",
+   "asal_masalah": 24
+  },
+  {
+   "a": "1/2",
+   "b": "1/4",
+   "asal_masalah": 4
+  },
+  {
+   "a": "1/2",
+   "b": "1/8",
+   "asal_masalah": 8
+  },
+  {
+   "a": "1/4",
+   "b": "1/8",
+   "asal_masalah": 8
+  }
+ ],
+ "jadwal_ii": [
+  {
+   "baris": 15,
+   "kolom": 9,
+   "raw": "1/3"
+  },
+  {
+   "baris": 19,
+   "kolom": 15,
+   "raw": null
+  },
+  {
+   "baris": 19,
+   "kolom": 9,
+   "raw": "1/3"
+  },
+  {
+   "baris": 22,
+   "kolom": 19,
+   "raw": "←1/2"
+  },
+  {
+   "baris": 22,
+   "kolom": 15,
+   "raw": "←1/2"
+  },
+  {
+   "baris": 22,
+   "kolom": 9,
+   "raw": "1/3"
+  },
+  {
+   "baris": 25,
+   "kolom": 22,
+   "raw": "2/3"
+  },
+  {
+   "baris": 25,
+   "kolom": 19,
+   "raw": null
+  },
+  {
+   "baris": 25,
+   "kolom": 15,
+   "raw": null
+  },
+  {
+   "baris": 25,
+   "kolom": 9,
+   "raw": null
+  },
+  {
+   "baris": 0,
+   "kolom": 25,
+   "raw": "1/3"
+  },
+  {
+   "baris": 0,
+   "kolom": 22,
+   "raw": null
+  },
+  {
+   "baris": 0,
+   "kolom": 19,
+   "raw": null
+  },
+  {
+   "baris": 0,
+   "kolom": 15,
+   "raw": null
+  },
+  {
+   "baris": 0,
+   "kolom": 9,
+   "raw": null
+  }
+ ],
+ "contoh_dokumen": [
+  {
+   "id": "contoh_1_9",
+   "judul": "Contoh 1-9 (alur metode praktis): satu soal dikerjakan bertahap",
+   "hadir": "25 suami, 29 anak pr (2+), 19 saudari sekandung (1), 12 saudari seibu (2+)",
+   "hasil_mentah": "29: 2/3 (kls18) | 25: 1/4 (kls14), 1/2 (kls17) | 19: 1/2 (kls17), A (kls3) | 12: 1/3 (kls16) x3, Mj (kls2)",
+   "hasil_baku": "29: 2/3 | 25: 1/4 | 19: A | 12: Mj",
+   "hasil_akhir": "Asal masalah 12: suami 3/12, anak pr 8/12, saudari sekandung (A) 1/12, saudari seibu 0",
+   "nomor_dalil": "suami 19, anak pr 21, saudari sekandung 12, saudari seibu 4",
+   "verifikasi": "LOLOS: sel database (29,25)=1/4, (29,19)=A, (25,19)=1/2, (19,12)=(25,12)=1/3, (29,12)=Mj, baris 0 cocok persis dengan contoh 3-5 di file, termasuk kelas 17/16/3/2."
+  },
+  {
+   "id": "kasus_II_wasiat",
+   "judul": "Contoh Kasus II: istri, ibu, anak pr, cucu lk+pr (pengganti), wasiat masjid, saudara seayah",
+   "hadir": "istri A, ibu B, 1 anak pr kandung C, saudara lk seayah D (terhalang, hanya menerima wasiat), cucu lk E dan cucu pr F dari anak lk yang wafat lebih dulu",
+   "hasil_mentah": "istri 1/8, ibu 1/6, anak pr 1/2 (masing-masing dari 2/3 sisa setelah wasiat 1/3); sisa 10/72 ke cucu lk dan cucu pr sebagai ashabah 2:1",
+   "hasil_baku": "-",
+   "hasil_akhir": "dasar 216: masjid 54/216 (1/4 dari harta peninggalan; wasiat total 1/3 = 72/216), D 18/216 (1/12), istri 18/216, ibu 24/216, anak pr 72/216, cucu lk 20/216, cucu pr 10/216, total 216/216",
+   "nomor_dalil": "-",
+   "verifikasi": "Hitungan ulang lolos. KESALAHAN CETAK di file: baris penjumlahan menulis anak pr 108/216, seharusnya 72/216 (2/6). Dengan 72 total 216/216 baru benar."
+  }
+ ],
+ "khi_ringkasan": [
+  {
+   "no": 1,
+   "ahli_waris": "Anak perempuan",
+   "bagian": "1/2",
+   "kaidah": "seorang diri",
+   "khi": "Pasal 176",
+   "alquran": "QS An-Nisa 11b"
+  },
+  {
+   "no": 1,
+   "ahli_waris": "Anak perempuan",
+   "bagian": "2/3",
+   "kaidah": "dua orang atau lebih",
+   "khi": "Pasal 176",
+   "alquran": "QS An-Nisa 11b"
+  },
+  {
+   "no": 2,
+   "ahli_waris": "Ayah",
+   "bagian": "1/3",
+   "kaidah": "pewaris tidak meninggalkan anak, tetapi ada suami dan ibu",
+   "khi": "Pasal 177 dan SEMA No. 2/1994",
+   "alquran": "QS An-Nisa 11e"
+  },
+  {
+   "no": 2,
+   "ahli_waris": "Ayah",
+   "bagian": "1/6",
+   "kaidah": "pewaris meninggalkan anak",
+   "khi": "Pasal 177",
+   "alquran": "QS An-Nisa 11d"
+  },
+  {
+   "no": 3,
+   "ahli_waris": "Ibu",
+   "bagian": "1/6",
+   "kaidah": "ada anak atau dua saudara atau lebih",
+   "khi": "Pasal 178 ayat 1",
+   "alquran": "Ijtihad"
+  },
+  {
+   "no": 3,
+   "ahli_waris": "Ibu",
+   "bagian": "1/6 + sisa",
+   "kaidah": "contoh: mewaris bersama suami/istri dan 1 anak perempuan",
+   "khi": "Pasal 178 ayat 1",
+   "alquran": "Ijtihad"
+  },
+  {
+   "no": 3,
+   "ahli_waris": "Ibu",
+   "bagian": "1/3",
+   "kaidah": "tidak ada anak atau dua saudara atau lebih",
+   "khi": "Pasal 178 ayat 1",
+   "alquran": "QS An-Nisa 11d"
+  },
+  {
+   "no": 3,
+   "ahli_waris": "Ibu",
+   "bagian": "1/3 dari sisa",
+   "kaidah": "bersama-sama dengan ayah, janda atau duda",
+   "khi": "Pasal 178 ayat 2",
+   "alquran": ""
+  },
+  {
+   "no": 4,
+   "ahli_waris": "Duda/suami",
+   "bagian": "1/2",
+   "kaidah": "pewaris tidak meninggalkan anak",
+   "khi": "Pasal 179",
+   "alquran": "QS An-Nisa 12a"
+  },
+  {
+   "no": 4,
+   "ahli_waris": "Duda/suami",
+   "bagian": "1/4",
+   "kaidah": "pewaris meninggalkan anak",
+   "khi": "Pasal 179",
+   "alquran": "QS An-Nisa 12b"
+  },
+  {
+   "no": 5,
+   "ahli_waris": "Janda/istri",
+   "bagian": "1/4",
+   "kaidah": "pewaris tidak meninggalkan anak",
+   "khi": "Pasal 180",
+   "alquran": "QS An-Nisa 12c"
+  },
+  {
+   "no": 5,
+   "ahli_waris": "Janda/istri",
+   "bagian": "1/8",
+   "kaidah": "pewaris meninggalkan anak",
+   "khi": "Pasal 180",
+   "alquran": "QS An-Nisa 12d"
+  },
+  {
+   "no": 6,
+   "ahli_waris": "Saudara seibu (lk/pr)",
+   "bagian": "1/6",
+   "kaidah": "tanpa meninggalkan anak dan ayah",
+   "khi": "Pasal 181",
+   "alquran": "QS An-Nisa 12e"
+  },
+  {
+   "no": 6,
+   "ahli_waris": "Saudara seibu (lk/pr)",
+   "bagian": "1/3",
+   "kaidah": "bila dua orang atau lebih",
+   "khi": "Pasal 181",
+   "alquran": "QS An-Nisa 12e"
+  },
+  {
+   "no": 7,
+   "ahli_waris": "Saudari kandung/seayah",
+   "bagian": "1/2",
+   "kaidah": "seorang diri, pewaris tanpa ayah dan anak",
+   "khi": "Pasal 182",
+   "alquran": "QS An-Nisa 176a"
+  },
+  {
+   "no": 7,
+   "ahli_waris": "Saudari kandung/seayah",
+   "bagian": "2/3",
+   "kaidah": "dua orang atau lebih, pewaris tanpa ayah dan anak",
+   "khi": "Pasal 182",
+   "alquran": "QS An-Nisa 176b"
+  },
+  {
+   "no": 7,
+   "ahli_waris": "Saudari kandung/seayah",
+   "bagian": "2 : 1",
+   "kaidah": "bersama saudara lk kandung/seayah, pewaris tanpa ayah dan anak",
+   "khi": "Pasal 182",
+   "alquran": "QS An-Nisa 176c"
+  }
+ ],
+ "tabel_vii": {
+  "judul": "TABEL VII Daftar Nomor Dalil (hasil baku x angka waris -> nomor dalil di tabel_viii)",
+  "kolom": [
+   "1/6A|1/6As",
+   "A|As",
+   "1/3|1/2",
+   "2/3",
+   "<-S|<-1/2",
+   "1/8|Mj",
+   "1/4|1/6",
+   "1/IV|1/VI",
+   "AI|AII"
+  ],
+  "cara_baca": "Tiap kolom punya 2 label (atas|bawah), sel tidak menandai mana. Pilih label yang cocok dengan angka waris dan hasil baku. Contoh: angka 25 + 1/4 -> 19; angka 29 + 2/3 -> 21.",
+  "baris": [
+   {
+    "angka_waris": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "grup": "1-6",
+    "sel": {
+     "A|As": "1",
+     "1/8|Mj": "4"
+    }
+   },
+   {
+    "angka_waris": [
+     7,
+     8
+    ],
+    "grup": "7-8",
+    "sel": {
+     "<-S|<-1/2": "3",
+     "1/8|Mj": "4",
+     "1/4|1/6": "2"
+    }
+   },
+   {
+    "angka_waris": [
+     9
+    ],
+    "grup": "9",
+    "sel": {
+     "1/3|1/2": "5",
+     "2/3": "24",
+     "1/4|1/6": "6",
+     "1/IV|1/VI": "7"
+    }
+   },
+   {
+    "angka_waris": [
+     10,
+     11,
+     12,
+     13
+    ],
+    "grup": "10-13",
+    "sel": {
+     "1/3|1/2": "9",
+     "<-S|<-1/2": "9",
+     "1/8|Mj": "4",
+     "1/4|1/6": "8"
+    }
+   },
+   {
+    "angka_waris": [
+     14,
+     15,
+     18,
+     19
+    ],
+    "grup": "14,15,18,19",
+    "sel": {
+     "A|As": "12",
+     "1/3|1/2": "14",
+     "2/3": "10",
+     "<-S|<-1/2": "11",
+     "1/8|Mj": "4",
+     "1/4|1/6": "13",
+     "AI|AII": "26"
+    }
+   },
+   {
+    "angka_waris": [
+     16,
+     17,
+     20,
+     21
+    ],
+    "grup": "16,17,20,21",
+    "sel": {
+     "A|As": "1 (1-5)",
+     "1/8|Mj": "4",
+     "AI|AII": "25"
+    }
+   },
+   {
+    "angka_waris": [
+     22
+    ],
+    "grup": "22",
+    "sel": {
+     "1/6A|1/6As": "23",
+     "A|As": "29",
+     "1/8|Mj": "4",
+     "1/4|1/6": "27"
+    }
+   },
+   {
+    "angka_waris": [
+     23
+    ],
+    "grup": "23",
+    "sel": {
+     "1/8|Mj": "17",
+     "1/4|1/6": "16"
+    }
+   },
+   {
+    "angka_waris": [
+     22,
+     24
+    ],
+    "grup": "22,24",
+    "sel": {
+     "1/6A|1/6As": "28",
+     "A|As": "29",
+     "1/8|Mj": "4",
+     "1/4|1/6": "27"
+    }
+   },
+   {
+    "angka_waris": [
+     25
+    ],
+    "grup": "25",
+    "sel": {
+     "1/3|1/2": "18",
+     "1/4|1/6": "19"
+    }
+   },
+   {
+    "angka_waris": [
+     26,
+     27,
+     28,
+     29
+    ],
+    "grup": "26-29",
+    "sel": {
+     "1/3|1/2": "22",
+     "2/3": "21",
+     "<-S|<-1/2": "20",
+     "1/8|Mj": "4",
+     "1/4|1/6": "12"
+    }
+   },
+   {
+    "angka_waris": [
+     28
+    ],
+    "grup": "28",
+    "sel": {
+     "1/3|1/2": "12"
+    }
+   },
+   {
+    "angka_waris": [
+     30,
+     31
+    ],
+    "grup": "30-31",
+    "sel": {
+     "A|As": "1",
+     "1/8|Mj": "4"
+    }
+   }
+  ],
+  "tinjau": [
+   "Baris 9 (ibu): dalil 24 di kolom 2/3 (dalil 24 = ibu 1/6 bila 2+ saudara), letak janggal.",
+   "Baris 28: dalil 12 di kolom 1/3|1/2, padahal grup 26-29 sudah 22 untuk 1/2; belum jelas maksudnya.",
+   "Baris 22 dan 22,24 dipisah di sumber (22 sendiri: 1/6A=23; 22,24: 1/6As=28)."
+  ]
+ },
+ "tabel_viii": {
+  "judul": "TABEL VIII 29 dalil (Arab + terjemah + kutipan KHI), teks asli docx; nomor = nomor dalil di tabel_vii",
+  "dalil": [
+   {
+    "no": 1,
+    "arab": "عن ابن عباس رضى الله عنهما عن النبي صعم قال : (الحقوا الفرائض) اهلها فمابقى فلاولى رجل ذكر (الحديث رواه الشيخان الخطيب الجزء الثانى ص . 99 .",
+    "terjemah": "Hadits dari Ibni Abbas Ra, dari Nabi saw, beliau bersabda: berikanlah bahagian tertentu pada mereka yang berhak menerimanya, adapun sisanya untuk ahli waris laki-laki yang terdekat hubungannya ke pada pewaris. (HR. Bukhori Muslim, al-Khotib juz II halaman 99).",
+    "tambahan": []
+   },
+   {
+    "no": 2,
+    "arab": "عن المغيرة قال : إنه صعم اعطى الجدة السدس ( الحديث رواه ابو داود –الخطيب الجزء الثانى ص 107 ).",
+    "terjemah": "Dari sahabat al-Mughiroh berkata: “Bahwa Nabi pernah member I harta pusaka kepada seorang nenek 1/6 (seperenam)”. (HR Imam Abu Dwud al-Khotib juz II halaman 107)",
+    "tambahan": []
+   },
+   {
+    "no": 3,
+    "arab": "عن عبادة بن الصامت رضى الله عنه انه صعم قضى الجدتين من الميراث السدس بينهما وقال حديث صحيح على شرط المشيخين (الحديث رواه الحاكم – الخطيب الجزء الثانى ص : 107 ).",
+    "terjemah": "Dari Ubadah bin Shomit Ra. Berkata: “bahwa Nabi saw, pernah memberiikan benda pusaka untuk dua orang nenek 1/6 (seperenam bagiannya bersama-sama). Hadits Shoheh menurut syarah Bukhori Muslim riwayat al-Hakimi – al-Khotib juz II halaman 107)",
+    "tambahan": []
+   },
+   {
+    "no": 4,
+    "arab": "هو محجوب بمن هواقرب منه الى الميت وهو الذى الاكبر منه نمرة وارث . ()",
+    "terjemah": "Ia terhalang oleh ahli waris yang terdekat hubungannya dengan pewaris dari padanya.",
+    "tambahan": []
+   },
+   {
+    "no": 5,
+    "arab": "فَإِن لَّمۡ يَكُن لَّهُۥ وَلَدٞ (اوولد ابن اجماعا) وَوَرِثَهُۥٓ أَبَوَاهُ فَلِأُمِّهِ ٱلثُّلُثُۚ ( سورة النساء اية 11 ).",
+    "terjemah": "Jika pewaris tidak mempunyai anak dan harta peninggalan diwarisi oleh ibu dan bapaknya   saja, maka ibu mendapat sepertiga bagian. (QS. An-Nisa ayat 11)",
+    "tambahan": [
+     "Ijma’ ulama  menambahkan  jika pewaris tidak mempunyai anak atau cucu dan harta peninggalan diwarisi oleh ibu dan bapaknya   saja, maka ibu mendapat sepertiga bagian.",
+     "KHI Pasal 178, “Ibu mendapat seperenam bagian bila ada anak atau dua saudara atau lebih. Bila tidak ada anak atau dua orang saudara atau lebih, maka ia mendapat sepertiga bagian.”"
+    ]
+   },
+   {
+    "no": 6,
+    "arab": "الام لها السدس لقوله تعالى : وَلِأَبَوَيۡهِ لِكُلِّ وَٰحِدٖ مِّنۡهُمَا ٱلسُّدُسُ مِمَّا تَرَكَ إِن كَانَ لَهُۥ وَلَدٞۚ( اوولم ابن والجد فى ذلك كالأب اجماعا ) (النساء : 11 ).",
+    "terjemah": "Untuk kedua orang tua ibu-bapak, masing-masing  menerima seperenam dari harta peninggalan,  jika pewaris mempunyai anak.  (QS. An-Nisa ayat 11)",
+    "tambahan": [
+     "Ijma’ ulama menambahkan “Untuk kedua orang tua ibu-bapak, masing-masing  menerima seperenam dari harta peninggalan,  jika pewaris mempunyai anak atau cucu laki-laki dari anak laki-klaki-laki",
+     "KHI Pasal 177 “bila ada anak, ayah mendapat seperenam bagian”",
+     "KHI Pasal 178, “Ibu mendapat seperenam bagian bila ada anak atau dua   saudara atau lebih”"
+    ]
+   },
+   {
+    "no": 7,
+    "arab": "لقضاء عمر ابن الخطاب فبهنما ( اى فى مسئلة الشرارين  ) بذلك بثلث الباقى الذى هو فى الحقيقة الربع اذا كان معهما درجة والسدس اذا كان معهما زوج ( الشرقاوى  II  : 122 ).",
+    "terjemah": "Karena Shohabah Umar bin Khotob  dalam  masalah (mas’alah ghorowain) dengan begitu rupa, ibu diberi 1/3 (sepertiga) dari sisa yang dalam kenyataannyan(1/3 sisa itu adalah ¼ apabila mreka bersama-sama istri dan 1/6 apabila bersama-sama suami. (kitab Syarqowi juz II halaman 172).",
+    "tambahan": []
+   },
+   {
+    "no": 8,
+    "arab": "وَإِن كَانَ رَجُلٞ يُورَثُ كَلَٰلَةً أَوِ ٱمۡرَأَةٞ وَلَهُۥٓ أَخٌ أَوۡ أُخۡتٞ( من ام قراه ابن مسعود وغيره ذلك )فَلِكُلِّ وَٰحِدٖ مِّنۡهُمَا ٱلسُّدُسُۚ( سورة النساء اية 12 ).",
+    "terjemah": "Jika seseorang mati, baik laki-laki maupun perempuan, dan tidak meninggalkan bapak dan tidak meninggalkan anak, tetapi mempunyai seorang  saudara laki-laki (seibu saja) seorang saudara perempuan (seibu saja) maka bagi masing-masing dari kedua saudara sejenis itu mendapat  seperenam bagian dari harta peninggalan. (QS. An-Nisa ayat 12)",
+    "tambahan": [
+     "KHI Pasal 181, “Bila seorang meninggal tanpa meninggalkan anak dan ayah, maka saudara laki-laki dan saudara perempuan seibu masing-masing mendapat seperenam bagian.”"
+    ]
+   },
+   {
+    "no": 9,
+    "arab": "فَإِن كَانُوٓاْ أَكۡثَرَ مِن ذَٰلِكَ فَهُمۡ شُرَكَآءُ فِي ٱلثُّلُثِۚ( سورة النساء اية 12 ).",
+    "terjemah": "Jika saudara seibu itu lebih dari seorang,  maka mereka bersekutu dalam yang  sepertiga itu. (QS. An-Nisa ayat 12)",
+    "tambahan": [
+     "KHI Pasal 181 “Bila mereka itu dua orang atau lebih maka mereka bersama-sama mendapat sepertiga bagian."
+    ]
+   },
+   {
+    "no": 10,
+    "arab": "فَإِن كَانَتَا ٱثۡنَتَيۡنِ فَلَهُمَا ٱلثُّلُثَانِ مِمَّا تَرَكَۚ( سورة النساء  اية 176).",
+    "terjemah": "Jika saudara perempuan itu dua, maka mereka dapat dua pertiga dari  harta peninggalan. (QS. An-Nisa ayat 176)",
+    "tambahan": [
+     "KHI Pasal 182 “Bila saudara perempuan tersebut bersama-sama dengan saudara perempuan kandung atau seayah dua orang atau lebih, maka mereka bersama-sama mendapat dua pertiga bagian.”"
+    ]
+   },
+   {
+    "no": 11,
+    "arab": "وَإِن كَانُوٓاْ إِخۡوَةٗ رِّجَالٗا وَنِسَآءٗ فَلِلذَّكَرِ مِثۡلُ حَظِّ ٱلۡأُنثَيَيۡنِۗ( سورة النساء  اية 176).",
+    "terjemah": "Dan jika mereka (ahli waris itu terdiri dari) saudara-saudara laki dan perempuan, maka bahagian seorang saudara laki-laki sebanyak bahagian dua orang saudara perempuan. (QS. An-Nisa ayat 176)",
+    "tambahan": [
+     "KHI Pasal 182 “Bila saudara perempuan tersebut bersama-sama dengan saudara laki-laki kandung atau seayah, maka bagian saudara laki-laki dua berbanding satu dengan saudara perempuan."
+    ]
+   },
+   {
+    "no": 12,
+    "arab": "وعن ابن موسى رضى الله عنهما انّ ابن مسعود سئل عن بنت و بنت ابن واختفقال :لاقضين فيهما بما قضى رسول الله صعم : للبنت النصف ولابنة الابن السدس تكملة الثلثين فابقى فللاخت (الحديث رواه البخارى) وقيس ببنت الابن بنات الابن وبالاخت اخوات على هذا  الحديث بالاجماع ( القليوبى الجزء الثالث : 153 )",
+    "terjemah": "Dari Abu Musa Ra berkata : “Bahwa Ibnu Mas’ud benar-benar telah ditanya tentang mas’alah ahli waris seorang  anak  perempuan, seorang cucu perempuan dan seorang saudara perempuan. Maka jawabnya: tentu aku akan  memberi pada 2 (dua) orang (anak prempua dan cucu perempuan) itu menurut apa yang Rasululloh saw telah pernah membernya alah : untuk seorang anak perempuan 2/3 (dua pertiga). Maka sisanya saudara perempuan”. Al-Hadits (Riwayat Imam al-Bukhori: diqiyaskan pada hadits ini, hokum beberapa orang cucu perempua sama dengan seorang cucu perempuan, hukum beberapa orang saudara perempuan sama dengan seorang saudara perempuan, dengan Ijma’. (al-Qulyubi juz III halaman 153).",
+    "tambahan": []
+   },
+   {
+    "no": 13,
+    "arab": "فللاخت اوالاخوات للاب مع الاخت الشقيقة السدس قباسا على الحديث المذكور فى نمرة 12 (الكتاب رحيبة )",
+    "terjemah": "Maka seorang/lebih seorang saudara perempuan seayah saja bersamaan dengan seorang saudara perempuan sekandung mendapat 1/6 (seperenam): diqiyaskan pada al-Hadits dari : Abi Musa no.12 tersebut di atas (kitab Rohabiyah)",
+    "tambahan": []
+   },
+   {
+    "no": 14,
+    "arab": "إِنِ ٱمۡرُؤٌاْ هَلَكَ لَيۡسَ لَهُۥ وَلَدٞ( ولاولد ابن رجلا كان او امرءة ولا اب اجماعا )وَلَهُۥٓ أُخۡتٞ ( لابوين اولاب )فَلَهَا نِصۡفُ مَا تَرَكَۚ( سورة النساء  اية 176).",
+    "terjemah": "jika seorang meninggal dunia, dan ia tidak mempunyai anak dan mempunyai saudara perempuan, maka bagi saudaranya yang perempuan itu seperdua dari harta yang ditinggalkannya (QS: an-Nisa ayat 176)",
+    "tambahan": [
+     "Ijma’ Ulama : Jika ada seorang mayat tidak mempunyai anak (cucu dan ayah dengan Ijma’), tetapi punya seorang saudara perempuan (sekandung/seayah), maka ia mendapat ½ (separuh) barang pusaka.",
+     "KHI Pasal 182 ”Bila seorang meninggal tanpa meninggalkan anak dan ayah, sedang ia mempunyai satu saudara perempuan kandung atau seayah, maka dia mendapat separoh bagian”."
+    ]
+   },
+   {
+    "no": 15,
+    "arab": "قال الله تعلى فى الاخ : وَهُوَ يَرِثُهَآ إِن لَّمۡ يَكُن لَّهَا وَلَدٞۚ( اى ابن اوبن ابن ولا اب ) رقيس به الاخوة عليها ( سورة النساء  اية 176).",
+    "terjemah": "Mereka meminta fatwa kepadamu (tentang kalalah). Katakanlah: \"Allah memberi fatwa kepadamu tentang kalalah (yaitu): jika seorang meninggal dunia, dan ia tidak mempunyai anak dan mempunyai ayah…………………………….. dan saudaranya yang laki-laki mempusakai (seluruh harta saudara perempuan), jika ia tidak mempunyai anak (QS: an-Nisa ayat 176)",
+    "tambahan": [
+     "Ijma’ Ulama : Allah berfirman tentang keterangan ahli waris seorang saudara laki-laki sekandung/seayah, ia juga ahli waris saudaranya yang perempuan, ika saudara permpuan yang meninggal itu tidak mempunya anak (artinya anak-laki/cucu laki-laki dari anak laki-laki dan tidak mempunyai anak).",
+     "Hukum beberapa saudara laki-laki itu diqiyaskan (disamakan) dengan anak-laki-laki."
+    ]
+   },
+   {
+    "no": 16,
+    "arab": "وَلَهُنَّ ٱلرُّبُعُ مِمَّا تَرَكۡتُمۡ إِن لَّمۡ يَكُن لَّكُمۡ وَلَدٞۚ( اوولد ابن اجماعا ) ( سورة النساء  اية 12).",
+    "terjemah": "Dan seorang  istri atau beberapa orang isteri  mendapat  seperempat bagian  dari harta yang kamu (suami) tinggalkan,   jika kamu tidak mempunyai anak. (QS: an-Nisa ayat 12)",
+    "tambahan": [
+     "Ijma’ ulama, ”Dan seorang  istri atau beberapa orang isteri  mendapat  seperempat bagian  dari harta yang kamu (suami) tinggalkan,   jika kamu tidak mempunyai anak (atau cucu dari anak laki-laki”.)",
+     "KHI Pasal; 180 “Janda mendapat seperempat bagian bila pewaris tidak meninggalkan anak, dan bila pewaris meninggalkan anak maka janda mendapat seperdelapan bagian.”"
+    ]
+   },
+   {
+    "no": 17,
+    "arab": "فَإِن كَانَ لَكُمۡ وَلَدٞ(اوولد ابن اجماعا )فَلَهُنَّ ٱلثُّمُنُ مِمَّا تَرَكۡتُمۚ( سورة النساء  اية 12).",
+    "terjemah": "Jika kamu mempunyai anak maka seorang   isteri atau beberapa orang isteri mendapatkan seperdelapan bagian dari harta yang kamu tinggalkan. (QS: an-Nisa ayat 12)",
+    "tambahan": [
+     "Jika kamu mempunyai anak (atau cucu dari anak laki-laki) maka seorang   isteri atau beberapa orang isteri mendapatkan seperdelapan bagian dari harta yang kamu tinggalkan.",
+     "KHI Pasal; 180 “………………dan bila pewaris meninggalkan anak maka janda mendapat seperdelapan bagian.”"
+    ]
+   },
+   {
+    "no": 18,
+    "arab": "وَلَكُمۡ نِصۡفُ مَا تَرَكَ أَزۡوَٰجُكُمۡ إِن لَّمۡ يَكُن لَّهُنَّ وَلَدٞۚ( اوولد ابن اجماعا )( سورة النساء  اية 12).",
+    "terjemah": "Dan bagianmu (suami) mendapat setengah bagian dari harta peninggalan isteri-isterimu, jika mereka  tidak mempunyai anak. (QS: an-Nisa ayat 12)",
+    "tambahan": [
+     "Ijma’ ulama ”Dan bagianmu (suami) mendapat setengah bagian dari harta peninggalan isteri-isterimu, jika mereka  tidak mempunyai anak (atau cucu dari anak laki-laki.)",
+     "KHI Pasal 179,  “Duda mendapat separoh bagian, bila pewaris tidak meninggalkan anak, dan bila pewaris meninggalkan anak, maka duda mendapat seperempat bagaian."
+    ]
+   },
+   {
+    "no": 19,
+    "arab": "فَإِن كَانَ لَهُنَّ وَلَدٞ(اوولد ابن اجماعا )فَلَكُمُ ٱلرُّبُعُ مِمَّا تَرَكۡنَۚ( سورة النساء  اية 12).",
+    "terjemah": "Jika isteri-isteri itu mempunyai anak, maka kamu (suami) mendapat seperempat  dari harta peninggalan isteri-isterimu. (QS: an-Nisa ayat 12)",
+    "tambahan": [
+     "Jika isteri-isteri itu mempunyai anak  (atau cucu dari anak laki-laki.), maka kamu (suami) mendapat seperempat  dari harta peninggalan isteri-isterimu.",
+     "KHI Pasal 179,  “…………………… dan bila pewaris meninggalkan anak, maka duda mendapat seperempat bagaian”."
+    ]
+   },
+   {
+    "no": 20,
+    "arab": "يُوصِيكُمُٱللَّهُ فِيٓ أَوۡلَٰدِكُمۡۖ لِلذَّكَرِ مِثۡلُ حَظِّ ٱلۡأُنثَيَيۡنِۚ(وولد الابن كالولد اجماعا ) ( سورة النساء  اية 11).",
+    "terjemah": "Allah mensyariatkan bagian warisan anak-anakmu, yaitu seorang anak laki-  laki sama dengan dua orang   anak perempuan. (QS: An-Nisa ayat 11)",
+    "tambahan": [
+     "Ijma’ ulama, “Allah mensyariatkan bagian warisan anak-anakmu, yaitu seorang anak laki-laki sama dengan dua orang   anak perempuan (segendong sepikul, Jawa) hokum cucu dari anak laki-laki seperti hokum anak.",
+     "KHI Pasal 176, “……….dan apabila anak perempuan bersama-sama dengan anak laki-laki, maka bagian anak laki-laki adalah dua berbanding satu dengan anak perempuan”."
+    ]
+   },
+   {
+    "no": 21,
+    "arab": "فَإِن كُنَّ نِسَآءٗ فَوۡقَ ٱثۡنَتَيۡنِ فَلَهُنَّ ثُلُثَا مَا تَرَكَۖ( وبنات الابن كالبنات اجماعا ) ( سورة النساء  اية 11).",
+    "terjemah": "Jika anak perempuan itu dua atau lebih, maka bagi mereka  dua pertiga dari harta yang ditinggalkan. (QS: An-Nisa ayat 11)",
+    "tambahan": [
+     "KHI Pasal 176, “………..bila dua orang atau lebih mereka bersama-sama mendapat dua pertiga bagian, dan apabila anak perempuan bersama-sama dengan anak laki-laki, maka bagian anak laki-laki adalah dua berbanding satu dengan anak perempuan”."
+    ]
+   },
+   {
+    "no": 22,
+    "arab": "وَإِن كَانَتۡ وَٰحِدَةٗ فَلَهَا ٱلنِّصۡفُۚ(وبنت الابن كالبنت اجماعا ) ( سورة النساء  اية 11).",
+    "terjemah": "Jika anak perempuan itu seorang saja, maka ia memperoleh separoh harta  peninggalan  (QS: An-Nisa ayat 11)",
+    "tambahan": [
+     "KHI Pasal 176, “Anak perempuan bila hanya seorang ia mendapat separoh bagian………….”."
+    ]
+   },
+   {
+    "no": 23,
+    "arab": "الجد له السدس فرضا والباقى تعصيبا واذا كان معه إخوة فيعد عليه الاخوة المحجوبة بغيره فله السدس حتى تعول ان كان الباقى سدسا ناقل وله السدس اوالمقاسمة ان كان الباقى ثلثا ناقل وله ثلث الباقى اوالمقاسمة ان كان الباقى نصفا فاكثر وله تنبت الجميع اوالمقاسمة ان لم يكن فيها ذوفرض انظرتابيلIX ( ص 16 )",
+    "terjemah": "Kakek mendapatkan 1/6 (seperenam) bagian sebagai bahagian tetap dan sisanya sebagai again lunak dan jika bersamaan denga saudara, maka kakek maka kakek menghitung saudara yag terhalang bukan olehnya, kakek sekurang-kurangnya menda[atkan 1/6 (seperenam) bagian, sehingga terulur jika bersisa 1/6 ke bawah, dan menda[at 1/3 sisa atau bagi rata jika bersisa ½ ke atas, dan mendapatkan 1/3 jumlah pusaka atau bagi rata tiada ahli waris yang lain.",
+    "tambahan": []
+   },
+   {
+    "no": 24,
+    "arab": "فَإِن كَانَ لَهُۥٓ إِخۡوَةٞ فَلِأُمِّهِ ٱلسُّدُسُۚ( سورةالنساءاية 11).",
+    "terjemah": "Jika sipewaris meninggalkan dua saudara  atau lebih, maka ibunya mendapat seperenam. (QS: An-Nisa ayat 11)",
+    "tambahan": [
+     "KHI Pasal 178, “Ibu mendapat seperenam bagian bila ada anak atau dua saudara atau lebih.”"
+    ]
+   },
+   {
+    "no": 25,
+    "arab": "المسئلة المشتركة فيما بين الاخوة لام واب وبين الاخوة لام سواء كان معهم اخت لام واب اواكثر اولم يكن وسواء كان معهم ذوفرض اولم يكن واذا كان عدد من الاخوة لام واب اكثر من عدد من الاخوة لام حتى ينقث سهم كل واحد من الاخوة لام واب عن كل واحد من الاخوة لام فقط اوكان الفروض يستفرق التركة فاجعل كلهم اولاد ام فقد لان لايسقط الخوة لام واب وحازوا التراكة لان الاخواة لام واب حق لهم على الاخوة لام فقط بدليل ان الاخواة لام واب لايحجبهم البنت اوالجد والاخت لام واب مع البنت عصبة ومع الجد كاخته مقاسمة وهي لها النصف فرصا ولم يكن على الاخوة لام فقط كذالك بل محجوبة بالبنت او بالجد ومن امثلتها. (الاولى) ان كان الميت عن زوج وام واخ لام واب واخوين لام فقط فلا شيء للاخ لام واب لان الفروض يستفرق التركة فاجعل كلهم اولاد لم ويقسم ثلث التركة الذي هو فروض الاخوين لام على ثلاثة الاخوة لام فيقسم بالفرض لا بالعصوبة (والثانية) ان كان الميت عى زوج وام واخوين وام واب واخ لام فقط فبقى شيء للاخوين للام والاب وهم السدس وللاخ للام فقط السدس وينقص سهم كل واحد منهما من سهم كل واحد منه فاجعل كلهم اولاد ام واجمع السدس الذي هو للاخوين لام واب والسدس الذي هو للاخ لام فقط بثلث التراكة ويقسم ثلث التراكة حاصل الجمع على ثلثة الخوة لام ايضا يقسم بالفرض لا بالعصوبة لقوله تعالى : فَإِن كَانُوٓاْ أَكۡثَرَ مِن ذَٰلِكَ فَهُمۡ شُرَكَآءُ فِي ٱلثُّلُثِۚمما ترك ان لم يكن له ولد ( سورة النساء اية 12 ) المسئلة الاولى يسم بالمسئلة المشتركة الكبرى والثانى بالمسئلة المشتركة الصغرى وكذالك ان كان عن زوج واخوين لام واخوين لام واب",
+    "terjemah": "Masalah Musytarikah adalah berkumpulnya antara saudara seibu seayah dengan saudara seibu saja, baik disertai seorang saudara perempuan seibu seayah atau lebih banyak, atau tanpa saudara perempuan seibu – seayah, baik dlam masalah itu disertai ahli waris lainnya atau tidak.",
+    "tambahan": [
+     "Dan jika jumlah bilangan dari saudara seibu – seayah itu lebih banyak dari pada jumlah bilangan saudara seibu saja sehinga kurang bahagian tiap seorang saudra seibu - seayah dari padanbahagian tiap seorang saudara seibu saja atau terjadi ahli waris mengabiskan pusaka, maka jadikanlah semua saudara itu seibu saja, agar supaya tidak gagal mendapat bahagian pusaka untuk saudara seibu – seayah.",
+     "Karena saudara seibu – seayah itu lebih hak baginya dari pada saudara seibu saja, dengan alas an saudara kandung tidak terhalang oleh anak perempuan atau kakek, dan saudara seibu – seayah itu berkumpul dengan anak perempuan, memjadi ashobah, dan berkumpul dengan kakek dianggap saudaranya, mendapat separuh dari bagian kakek, dan baginya separuh sebagai bagian tetap. Tidak ada saudara seibu saja seperti saudara seibu – seayah malah mereka terhalang oleh anak perempuan atau oleh kakek, setengah dai umpamanya :"
+    ]
+   },
+   {
+    "no": 26,
+    "arab": "الاخت الشقيقةاولاب مع الجد لافرض لها الا فى المسألة الاكدرية وهي : زوج ولم وجد واخت",
+    "terjemah": "Saudara  perempuan sekandung/seayah bersamaan dengan kakek tidak mempunyai bagian kecuali dalam masalah Akdariyah yaitu : suami, ibu, kakek dan seorang saudara perempuan.",
+    "tambahan": []
+   },
+   {
+    "no": 27,
+    "arab": "الاب او الجد له السدس فقط ان كان الميت ابن او ابن ابن اجماعا",
+    "terjemah": "Ayah atau kakek baginya 1/6 bagian saja, jika pewaris mempunyai anak laki atau cucu laki-laki.",
+    "tambahan": [
+     "KHI Pasal 177, “ Ayah mendapat sepertiga bagian bila pewaris tidak meninggalkan anak, tetapi meninggalkan suami dan ibu, bila ada anak, ayah mendapat seperenam bagian.”"
+    ]
+   },
+   {
+    "no": 28,
+    "arab": "الاب اوالجد له السدس فرضا والباقى تعصيبا ان كان الميت بنت او بنت ابن لقوله تعالى : وَلِأَبَوَيۡهِ لِكُلِّ وَٰحِدٖ مِّنۡهُمَا ٱلسُّدُسُ مِمَّا تَرَكَ إِن كَانَ لَهُۥ وَلَدٞۚ( سورة النساء  اية 11).",
+    "terjemah": "Ayah atau kakek baginya 1/6 bagian sebagai bagian tetap dan sisanya sebagai bagian lunak, jika pewaris mempunyai anak perempuan atau cucu perempuan berdasarkan firman Allah dalam surat an-Nisa ayat 11 yang artinya : “bagi ayah dan ibunya masing-masing 1/6 bagian jika pewaris mempunyai anak”",
+    "tambahan": [
+     "KHI Pasal 177, “ Ayah mendapat sepertiga bagian bila pewaris tidak meninggalkan anak, tetapi meninggalkan suami dan ibu, bila ada anak, ayah mendapat seperenam bagian.”"
+    ]
+   },
+   {
+    "no": 29,
+    "arab": "الاب اوالجد له الباقى فقط تعصيبا ان لم يكن الميت ابن  ولا ابن ابن ولابنت ولابنت ابن لقوله تعالى : فَإِن لَّمۡ يَكُن لَّهُۥ وَلَدٞ وَوَرِثَهُۥٓ أَبَوَاهُ فَلِأُمِّهِ ٱلثُّلُثُۚ( سورة النساء  اية 11) اى الباقى لاحد هما.",
+    "terjemah": "Ayah dan kakek mendapat sisa dari ibu saja, sebagai bagian lunak jika pewaris tidak mempunyai anak (cucu baik laki atau perempuan) berdasarkan firman Allah swt : “jika pewaris tidak mempunyai anak maka ahli warisna hanya kedua orang ibu dan ayah, bagi ibu 1/3 (sepertiga) dari harta peninggalan (sisanya untuk ayah)”. (QS: an-Nisa ayat 11)",
+    "tambahan": [
+     "KHI Pasal 178 ayat 1, “.................... Bila tidak ada anak ayau dua saudara atau lebih, maka ia mendapat sepertiga bagian.”",
+     "KHI Pasal 178 ayat 2, “Ibu mendapat sepertiga bagian dari sisa sesudah diambil oleh janda atau duda bila bersama-sama dengan ayah.”",
+     "PROGRAM MAGISTER KENOTARIATAN"
+    ]
+   }
+  ]
+ }
+}
