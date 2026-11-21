@@ -54,6 +54,7 @@ const tb=b=>b.pecahan==='0'&&b.jalur==='Pewaris'?`<div class="warn" style="margi
 function pas(r){const n=S.jk==='L'?S.istri:(S.suami?1:0);if(!n)return null;const bs=[];for(let i=0;i<n;i++)bs.push(S.b[i]||0);const tot=bs.reduce((a,x)=>a+x,0);if(!tot)return null;
  const w=r.bagian.find(x=>x.kunci===(S.jk==='L'?'istri':'suami')&&x.jalur==='Pewaris'),per=w?(w.rupiah||0)/n:0,T=S.jk==='L'?'Istri':'Suami';
  return{T,n,pec:w?w.pecahan:'0',rows:bs.map((x,i)=>({l:n>1?T+' '+(i+1):T,h:x/2,w:per,t:x/2+per})),tot:tot/2+per*n}}
+function pT(b){if(b.jalur!=='Pewaris'||(b.kunci!=='istri'&&b.kunci!=='suami'))return '';const p=pas(S.res);if(!p)return '';return `<div class="row" style="margin-top:8px;padding-top:8px;border-top:1px solid var(--bd)"><span class="sub">Total + ½ harta bersama</span><b>${rp(p.tot)}</b></div>`}
 function pasHtml(r){const p=pas(r);if(!p)return '';
  return `<div class="card"><b>${p.T} yang masih hidup: total bagian</b><p class="note" style="margin:4px 0 8px">Separuh harta bersama adalah hak pasangan (Pasal 96 KHI), bukan warisan. Ditambah bagian warisannya.</p>`+
  p.rows.map(x=>`<div style="padding:8px 0;border-top:1px solid var(--bd)">${p.n>1?`<b>${x.l}</b>`:''}<div class="row sub"><span>½ harta bersama</span><span>${rp(x.h)}</span></div><div class="row sub"><span>Warisan ${p.pec}${p.n>1?' dibagi '+p.n:''}</span><span>${rp(x.w)}</span></div><div class="row"><b>Total</b><span class="big" style="font-size:18px">${rp(x.t)}</span></div></div>`).join('')+
@@ -98,7 +99,7 @@ function detSheet(){
   x+='<div class="sub" style="margin-top:4px">Nominal dibulatkan ke rupiah penuh.</div>';h+=sec('Hitungan rupiah',x)}
  else h+=sec('Hitungan rupiah','<div class="note">Isi harta di langkah 3 untuk melihat nominal.</div>');
  if(b.jalur==='Pewaris'&&(b.kunci==='istri'||b.kunci==='suami')){const p=pas(r);
-  if(p)h+=sec(p.T+' hidup: total',`<div class="note" style="margin-bottom:6px">Selain warisan, pasangan hidup berhak ½ harta bersama (Pasal 96 KHI).</div>`+p.rows.map(x=>(p.n>1?`<b>${x.l}</b>`:'')+ln('½ harta bersama',rp(x.h))+ln('Warisan',rp(x.w))+ln('Total',rp(x.t),1)).join('<div style="height:8px"></div>'))}
+  if(p)h+=sec('Total bagian '+p.T.toLowerCase()+' (dengan ½ harta bersama)',`<div class="note" style="margin-bottom:6px">Selain warisan, pasangan hidup berhak ½ harta bersama (Pasal 96 KHI).</div>`+p.rows.map(x=>(p.n>1?`<b>${x.l}</b>`:'')+ln('½ harta bersama',rp(x.h))+ln('Warisan',rp(x.w))+ln('Total',rp(x.t),1)).join('<div style="height:8px"></div>')+(p.n>1?ln('Total semua istri',rp(p.tot),1):''))}
  if(hasRp&&H){const bw=S.m.bawaan||0,bs=Math.max(0,H.tirkah-bw+H.milik);let x='';
   if(bw)x+=ln('Harta bawaan',rp(bw));if(bs)x+=ln('Harta bersama',rp(bs));if(H.milik)x+=ln('− ½ hak pasangan hidup','− '+rp(H.milik));
   x+=ln('Harta peninggalan',rp(H.tirkah),1);
@@ -135,8 +136,8 @@ function view(){
    const hasRp=r.bagian.some(b=>b.rupiah);
    for(const [bi,b] of r.bagian.entries()){
     const ds=dalilHtml(b);
-    h+=`<div class="card tap" data-a="det" data-i="${bi}">${b.jalur&&b.jalur!=='Pewaris'?`<div class="sub" style="margin-bottom:4px">${esc(jl(b.jalur))}</div>`:''}<div class="row"><b>${esc(nm(b.nama))}${b.jumlah>1?' × '+b.jumlah:''}</b><span class="big">${b.pecahan}</span></div><div class="row sub"><span>${b.persen}%${b.jumlah>1?' untuk seluruhnya':''}</span><span>${hasRp?rp(b.rupiah||0):''}</span></div>${b.jumlah>1&&hasRp?`<div class="sub">± ${rp((b.rupiah||0)/b.jumlah)} per orang</div>`:''}${tb(b)}${ds}<div class="lk" style="margin-top:8px">Rincian hitungan ›</div></div>`}
-   h+=pasHtml(r);
+    h+=`<div class="card tap" data-a="det" data-i="${bi}">${b.jalur&&b.jalur!=='Pewaris'?`<div class="sub" style="margin-bottom:4px">${esc(jl(b.jalur))}</div>`:''}<div class="row"><b>${esc(nm(b.nama))}${b.jumlah>1?' × '+b.jumlah:''}</b><span class="big">${b.pecahan}</span></div><div class="row sub"><span>${b.persen}%${b.jumlah>1?' untuk seluruhnya':''}</span><span>${hasRp?rp(b.rupiah||0):''}</span></div>${b.jumlah>1&&hasRp?`<div class="sub">± ${rp((b.rupiah||0)/b.jumlah)} per orang</div>`:''}${pT(b)}${tb(b)}${ds}<div class="lk" style="margin-top:8px">Rincian hitungan ›</div></div>`}
+   h+='';
    if(r.catatan.length)h+=`<div class="note"><b>Catatan</b><br>${r.catatan.map(esc).join('<br>')}</div>`;
    h+='<div class="note">Alat bantu hitung berdasarkan KHI dan metode praktis. Bukan fatwa atau putusan. Untuk keputusan akhir, tanyakan ke ahli faraidh atau Pengadilan Agama.</div>';
   }
