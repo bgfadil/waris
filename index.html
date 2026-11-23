@@ -102,7 +102,7 @@ function detSheet(){
  h+=`<div class="row"><b style="font-size:18px">${esc(nm(b.nama))}${b.jumlah>1?' × '+b.jumlah:''}</b><button class="btn2" data-a="detx" style="width:auto;padding:0 16px;min-height:40px">Tutup</button></div>`;
  h+=`<div class="row"><span class="sub">${b.inner?b.inner_persen+'% dari harta pasangan':b.persen+'% dari harta yang dibagi'}</span><span class="big">${b.inner||b.pecahan}</span></div>`;
  h+='<!--HB-->'+sec('Asal bagian',`<div class="note">${esc(asal(b))}</div>${induk(b)}${tb(b)}${dalilHtml(b,1)}`);
- if(hasRp){const BP=b.inner?b.basis:D,PC=b.inner||b.pecahan;let x=ln(b.inner?'Harta pasangan yang dibagi':'Harta yang dibagi',rp(BP))+ln(`${PC} × ${rp(BP)}`,rp(b.rupiah),1);
+ if(hasRp){const BP=b.inner?b.basis:D,PC=b.inner||b.pecahan;let x=ln(b.inner?'Harta pasangan yang dibagi':'Harta yang dibagi',rp(BP))+(fardhOf(b)&&!b.inner&&WarisJS.Fr.of(b.pecahan).gt(WarisJS.Fr.of('1/6'))?ln('1/6 tetap',rp(Math.round(BP/6)))+ln('Sisa '+WarisJS.Fr.of(b.pecahan).sub(WarisJS.Fr.of('1/6'))+' (ashabah)',rp(b.rupiah-Math.round(BP/6)))+ln('Total '+b.pecahan,rp(b.rupiah),1):ln(`${PC} × ${rp(BP)}`,rp(b.rupiah),1));
   if(b.jumlah>1)x+=ln(`Dibagi ${b.jumlah} orang`,'± '+rp(b.rupiah/b.jumlah));
   x+='<div class="sub" style="margin-top:4px">Nominal dibulatkan ke rupiah penuh.</div>';h+=sec('Hitungan rupiah',x)}
  else h+=sec('Hitungan rupiah','<div class="note">Isi harta di langkah 3 untuk melihat nominal.</div>');
