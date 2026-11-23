@@ -204,15 +204,15 @@ class WarisLanjut {
     }
     return true;
   }
-  hitung(kasus) {
+  pasangan2(kasus, out, t, sa, nI, res) { const jal = 'Pewaris > ' + (sa.key === 'istri' ? 'Istri' : 'Suami') + ' (wafat sesudah)', rows = out.filter((x) => x.jalur.startsWith(jal)); const Fw = sum(rows.map((x) => x.fraksi)); if (Fw.eq(0)) return; const h = kasus.harta, b = h.bersama, idx = sa.idx != null ? sa.idx : nI - 1, bw = Array.isArray(b) ? Fr.of(b[idx] || 0) : Fr.of(b || 0), half = bw.div(2), own = Fr.of(h.bawaan_pasangan || 0), s1 = Fw.mul(t.dibagi), est = s1.add(half).add(own); for (const x of rows) { const inn = x.fraksi.div(Fw); x.rupiah = inn.mul(est); x.basis = Math.round(est.num()); x.inner = String(inn); x.inner_persen = Math.round(inn.num() * 1e4) / 100; } res.harta2 = { pihak: sa.key, frak: String(Fw), bagian1: Math.round(s1.num()), setengah: Math.round(half.num()), bawaan: Math.round(own.num()), total: Math.round(est.num()) }; } hitung(kasus) {
     const jk = kasus.pewaris.jk, node = kasus.ahli_waris, res = { status: 'ok', catatan: [], bagian: [] }, heirs = node.heirs || {};
-    const nI = heirs.istri || 0, nS = heirs.suami || 0, err = (m) => { res.status = 'error'; res.catatan.push(m); return res; };
+    const sA = (node.wafat_sesudah || []).filter((x) => x.key === 'istri' || x.key === 'suami'), nI = (heirs.istri || 0) + sA.filter((x) => x.key === 'istri').length, nS = (heirs.suami || 0) + sA.filter((x) => x.key === 'suami').length, err = (m) => { res.status = 'error'; res.catatan.push(m); return res; };
     if (jk === 'P' && nI) return err('Pewaris perempuan tidak punya istri.'); if (jk === 'L' && nS) return err('Pewaris laki-laki tidak punya suami.');
-    if (nI > 4) return err('Istri maksimal 4.'); if (jk === 'P' && nS > 1) return err('Suami maksimal 1.');
+    if (nI > 4) return err('Istri maksimal 4.'); if (jk === 'P' && nS > 1) return err('Suami maksimal 1.'); if (sA.length > 1) return err('Hanya satu pasangan yang boleh berstatus wafat sesudah pewaris.');
     const opsi = { musytarikah: kasus.musytarikah !== false, radd_pasangan: kasus.radd_pasangan !== false, radd: kasus.radd !== false }, out = [], cat = res.catatan;
     if (!this.node(node, ONE, 'Pewaris', jk, out, cat, opsi)) { res.status = 'tidak_didukung'; return res; }
     res.bagian = out; res.total = sum(out.map((x) => x.fraksi));
-    if (kasus.harta) { const [t, c] = this.tirkah(kasus.harta, jk, nI, nS); cat.push(...c); res.harta = t; for (const x of out) x.rupiah = x.fraksi.mul(t.dibagi); }
+    if (sA.length) cat.push('Pasangan wafat sebelum harta dibagi (waris berantai): hasil terdiri dari dua tingkat. Tingkat pertama membagi harta pewaris; bagian pasangan, separuh harta bersama miliknya, dan hartanya sendiri dibagi ke ahli warisnya.'); if (kasus.harta) { const [t, c] = this.tirkah(kasus.harta, jk, nI, nS); cat.push(...c); res.harta = t; for (const x of out) x.rupiah = x.fraksi.mul(t.dibagi); if (sA.length) this.pasangan2(kasus, out, t, sA[0], nI, res); }
     return res;
   }
 }
